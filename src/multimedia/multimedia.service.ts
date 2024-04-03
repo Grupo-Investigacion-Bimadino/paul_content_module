@@ -1,21 +1,37 @@
 import { Injectable } from '@nestjs/common';
+import { InjectModel } from '@nestjs/mongoose';
+import { Model } from 'mongoose';
+
+
+import { Multimedia } from './schemas/multimedia.schema';
+
 @Injectable()
 export class MultimediaService {
-private multimedia: any[] = [];
-findOne(id: number): string {
-return `Get multimedia with id ${id}`;
-}
-findAll(): string {
-return 'Get all multimedia';
-}
-create(createMultimediaDto): string {
-this.multimedia.push(createMultimediaDto);
-return 'multimedia created successfully';
-}
-update(id, updateMultimedia): string {
-return 'multimedia updated successfully';
-}
-delete(id): string {
-return 'multimedia deleted successfully';
-}
+    constructor(
+        @InjectModel(Multimedia.name) private multimediatModel: Model<Multimedia>,
+    ) { }
+
+    async findOne(id: number) {
+        let multimedia = await this.multimediatModel.findById(id);
+        return multimedia;
+    }
+
+    async findAll() {
+        let multimedia = await this.multimediatModel.find();
+        return multimedia;
+    }
+
+    create(createMultimediaDto) {
+        let multimedia = new this.multimediatModel(createMultimediaDto);
+    }
+
+    update(id, updateMultimedia) {
+        let multimedia = this.multimediatModel.findByIdAndUpdate(id, updateMultimedia, { new: true });
+        return multimedia;
+    }
+
+    delete(id) {
+        let multimedia = this.multimediatModel.findByIdAndDelete(id);
+        return multimedia;
+    }
 }
