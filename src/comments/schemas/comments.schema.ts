@@ -5,7 +5,7 @@ import  mongoose, {Document} from 'mongoose';
     timestamps: true
 })
 
-export class comments extends Document {
+export class Comments extends Document {
     @Prop()
     _id: string;
 
@@ -19,6 +19,6 @@ export class comments extends Document {
     author: string;
 }
 
-export const CommentSchema = SchemaFactory.createForClass(comments);
+export const CommentSchema = SchemaFactory.createForClass(Comments);
 
 
