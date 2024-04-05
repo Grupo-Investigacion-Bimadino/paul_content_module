@@ -1,22 +1,35 @@
-import { Injectable } from '@nestjs/common';
+import { Injectable } from "@nestjs/common";
+import { InjectModel } from "@nestjs/mongoose";
+import { Model } from "mongoose";
+import { Contents } from "../contents/schemas/content.schema";
+
 @Injectable()
 export class ContentsService {
-private contents: any[] = [];
-findOne(id: number): string {
-return `Get contents with id ${id}`;
-}
-findAll(): string {
-return 'Get all contentss';
-}
-create(createContentDto): string {
-this.contents.push(createContentDto);
-return 'contents created successfully';
-}
-update(id, updateContent): string {
-return 'contents updated successfully';
-}
-delete(id): string {
-return 'contents deleted successfully';
-}
-}
+	constructor(
+		@InjectModel(Contents.name) private contentstModel: Model<Contents>
+	) {}
 
+	async findOne(id: number) {
+		let contents = await this.contentstModel.findById(id);
+		return contents;
+	}
+
+	async findAll() {
+		let contents = await this.contentstModel.find();
+		return contents;
+	}
+
+	create(createContentDto) {
+		let contents = new this.contentstModel(createContentDto);
+	}
+	update(id, updateContent) {
+		let contents = this.contentstModel.findByIdAndUpdate(id, updateContent, {
+			new: true,
+		});
+		return Contents;
+	}
+	delete(id) {
+		let contents = this.contentstModel.findByIdAndUpdate(id);
+		return contents;
+	}
+}

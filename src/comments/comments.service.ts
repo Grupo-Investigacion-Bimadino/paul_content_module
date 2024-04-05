@@ -1,21 +1,34 @@
-import { Injectable } from '@nestjs/common';
+import { Injectable } from "@nestjs/common";
+import { InjectModel } from "@nestjs/mongoose";
+import { Model } from "mongoose";
+import { Comments } from "../comments/schemas/comments.schema";
+
 @Injectable()
 export class CommentsService {
-private comments: any[] = [];
-findOne(id: number): string {
-return `Get comments with id ${id}`;
-}
-findAll(): string {
-return 'Get all comments';
-}
-create(createCommentDto): string {
-this.comments.push(createCommentDto);
-return 'comments created successfully';
-}
-update(id, updateComment): string {
-return 'comments updated successfully';
-}
-delete(id): string {
-return 'comments deleted successfully';
-}
+	constructor(
+		@InjectModel(Comments.name) private commentstModel: Model<Comments>
+	) {}
+	async findOne(id: number) {
+		let comments = await this.commentstModel.findById(id);
+		return comments;
+	}
+
+	async findAll() {
+		let comments = await this.commentstModel.find();
+		return comments;
+	}
+
+	create(createCommentDto) {
+		let comments = new this.commentstModel(createCommentDto);
+	}
+	update(id, updateComment) {
+		let comments = this.commentstModel.findByIdAndUpdate(id, updateComment, {
+			new: true,
+		});
+		return comments;
+	}
+	delete(id) {
+		let comments = this.commentstModel.findByIdAndUpdate(id);
+		return comments;
+	}
 }

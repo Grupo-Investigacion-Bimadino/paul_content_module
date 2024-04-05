@@ -5,7 +5,7 @@ import  mongoose, {Document} from 'mongoose';
     timestamps: true
 })
 
-export class contents extends Document {
+export class Contents extends Document {
     @Prop()
     _id: string;
 
@@ -28,6 +28,6 @@ export class contents extends Document {
     status: string;
 }
 
-export const ContentSchema = SchemaFactory.createForClass(contents);
+export const ContentSchema = SchemaFactory.createForClass(Contents);
 
 

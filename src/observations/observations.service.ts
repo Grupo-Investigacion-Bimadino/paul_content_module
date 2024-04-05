@@ -1,21 +1,37 @@
-import { Injectable } from '@nestjs/common';
+import { Injectable } from "@nestjs/common";
+import { InjectModel } from "@nestjs/mongoose";
+import { Model } from "mongoose";
+import { Observations } from "../observations/schemas/observations.schema";
+
 @Injectable()
 export class ObservationsService {
-private observations: any[] = [];
-findOne(id: number): string {
-return `Get observations with id ${id}`;
-}
-findAll(): string {
-return 'Get all observations';
-}
-create(createObservationsDto): string {
-this.observations.push(createObservationsDto);
-return 'observations created successfully';
-}
-update(id, updateObservations): string {
-return 'observations updated successfully';
-}
-delete(id): string {
-return 'observations deleted successfully';
-}
+	constructor(
+		@InjectModel(Observations.name) private observationstModel: Model<Observations>
+	) {}
+
+	async findOne(id: number) {
+		let observations = await this.observationstModel.findById(id);
+		return observations;
+	}
+
+	async findAll() {
+		let observations = await this.observationstModel.find();
+		return observations;
+	}
+
+	create(createObservationsDto) {
+		let observations = new this.observationstModel(createObservationsDto);
+	}
+	update(id, updateObservations) {
+		let observations = this.observationstModel.findByIdAndUpdate(
+			id,
+			updateObservations,
+			{ new: true }
+		);
+		return observations;
+	}
+	delete(id) {
+		let observations = this.observationstModel.findByIdAndUpdate(id);
+		return observations;
+	}
 }

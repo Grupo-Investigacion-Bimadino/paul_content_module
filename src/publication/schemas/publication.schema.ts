@@ -4,7 +4,7 @@ import mongoose, { Document } from 'mongoose';
 @Schema({
     timestamps: true
 })
-export class Publicacion extends Document {
+export class Publication extends Document {
     @Prop()
     _id: string;
 
@@ -15,5 +15,5 @@ export class Publicacion extends Document {
     associated_content: object;
 }
 
-export const PublicacionSchema = SchemaFactory.createForClass(Publicacion);
+export const PublicationSchema = SchemaFactory.createForClass(Publication);
 

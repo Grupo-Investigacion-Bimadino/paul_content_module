@@ -1,21 +1,35 @@
-import { Injectable } from '@nestjs/common';
+import { Injectable } from "@nestjs/common";
+import { InjectModel } from "@nestjs/mongoose";
+import { Model } from "mongoose";
+import { Revisions } from "../revisions/schemas/revision.schema";
+
 @Injectable()
 export class RevisionsService {
-private revisions: any[] = [];
-findOne(id: number): string {
-return `Get revision with id ${id}`;
-}
-findAll(): string {
-return 'Get all revision';
-}
-create(createRevisionDto): string {
-this.revisions.push(createRevisionDto);
-return 'revision created successfully';
-}
-update(id, updateRevision): string {
-return 'revision updated successfully';
-}
-delete(id): string {
-return 'revision deleted successfully';
-}
+	constructor(
+		@InjectModel(Revisions.name) private revisionstModel: Model<Revisions>
+	) {}
+
+	async findOne(id: number) {
+		let revisions = await this.revisionstModel.findById(id);
+		return revisions;
+	}
+
+	async findAll() {
+		let revisions = await this.revisionstModel.find();
+		return revisions;
+	}
+
+	create(createRevisionDto) {
+		let revisions = new this.revisionstModel(createRevisionDto);
+	}
+	update(id, updateRevision) {
+		let revisions = this.revisionstModel.findByIdAndUpdate(id, updateRevision, {
+			new: true,
+		});
+		return revisions;
+	}
+	delete(id) {
+		let revisions = this.revisionstModel.findByIdAndUpdate(id);
+		return revisions;
+	}
 }
