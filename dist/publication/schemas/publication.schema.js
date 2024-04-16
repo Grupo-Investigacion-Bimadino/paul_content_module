@@ -15,13 +15,25 @@ const mongoose_2 = require("mongoose");
 let Publication = class Publication extends mongoose_2.Document {
 };
 exports.Publication = Publication;
+<<<<<<< HEAD
+__decorate([
+    (0, mongoose_1.Prop)(),
+    __metadata("design:type", String)
+], Publication.prototype, "_id", void 0);
+=======
+>>>>>>> main
 __decorate([
     (0, mongoose_1.Prop)(),
     __metadata("design:type", Date)
 ], Publication.prototype, "publish_start_date", void 0);
 __decorate([
+<<<<<<< HEAD
+    (0, mongoose_1.Prop)([String]),
+    __metadata("design:type", Object)
+=======
     (0, mongoose_1.Prop)({ type: [String] }),
     __metadata("design:type", Array)
+>>>>>>> main
 ], Publication.prototype, "associated_content", void 0);
 exports.Publication = Publication = __decorate([
     (0, mongoose_1.Schema)({

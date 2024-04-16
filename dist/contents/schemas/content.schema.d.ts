@@ -24,7 +24,11 @@
 /// <reference types="mongoose/types/inferschematype" />
 import mongoose, { Document } from 'mongoose';
 export declare class Contents extends Document {
+<<<<<<< HEAD
+    _id: string;
+=======
     _id: mongoose.Types.ObjectId;
+>>>>>>> main
     title: string;
     text: string;
     author: string;
@@ -34,7 +38,13 @@ export declare class Contents extends Document {
     contenttype: string;
 }
 export declare const ContentSchema: mongoose.Schema<Contents, mongoose.Model<Contents, any, any, any, mongoose.Document<unknown, any, Contents> & Contents & Required<{
+<<<<<<< HEAD
+    _id: string;
+}>, any>, {}, {}, {}, {}, mongoose.DefaultSchemaOptions, Contents, mongoose.Document<unknown, {}, mongoose.FlatRecord<Contents>> & mongoose.FlatRecord<Contents> & Required<{
+    _id: string;
+=======
     _id: mongoose.Types.ObjectId;
 }>, any>, {}, {}, {}, {}, mongoose.DefaultSchemaOptions, Contents, mongoose.Document<unknown, {}, mongoose.FlatRecord<Contents>> & mongoose.FlatRecord<Contents> & Required<{
     _id: mongoose.Types.ObjectId;
+>>>>>>> main
 }>>;

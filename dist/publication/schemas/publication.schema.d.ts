@@ -24,12 +24,22 @@
 /// <reference types="mongoose/types/inferschematype" />
 import mongoose, { Document } from 'mongoose';
 export declare class Publication extends Document {
+<<<<<<< HEAD
+    _id: string;
+=======
     _id: mongoose.Types.ObjectId;
+>>>>>>> main
     publish_start_date: Date;
     associated_content: string[];
 }
 export declare const PublicationSchema: mongoose.Schema<Publication, mongoose.Model<Publication, any, any, any, mongoose.Document<unknown, any, Publication> & Publication & Required<{
+<<<<<<< HEAD
+    _id: string;
+}>, any>, {}, {}, {}, {}, mongoose.DefaultSchemaOptions, Publication, mongoose.Document<unknown, {}, mongoose.FlatRecord<Publication>> & mongoose.FlatRecord<Publication> & Required<{
+    _id: string;
+=======
     _id: mongoose.Types.ObjectId;
 }>, any>, {}, {}, {}, {}, mongoose.DefaultSchemaOptions, Publication, mongoose.Document<unknown, {}, mongoose.FlatRecord<Publication>> & mongoose.FlatRecord<Publication> & Required<{
     _id: mongoose.Types.ObjectId;
+>>>>>>> main
 }>>;

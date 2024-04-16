@@ -28,6 +28,19 @@ export declare class ContentsController {
     private readonly contentService;
     constructor(contentService: ContentsService);
     findOne(id: number): Promise<import("mongoose").Document<unknown, {}, import("src/contents/schemas/content.schema").Contents> & import("src/contents/schemas/content.schema").Contents & Required<{
+<<<<<<< HEAD
+        _id: string;
+    }>>;
+    findAll(): Promise<(import("mongoose").Document<unknown, {}, import("src/contents/schemas/content.schema").Contents> & import("src/contents/schemas/content.schema").Contents & Required<{
+        _id: string;
+    }>)[]>;
+    create(createContentDto: any): void;
+    update(id: number, updateContent: any): typeof import("src/contents/schemas/content.schema").Contents;
+    delete(id: number): import("mongoose").Query<import("mongoose").Document<unknown, {}, import("src/contents/schemas/content.schema").Contents> & import("src/contents/schemas/content.schema").Contents & Required<{
+        _id: string;
+    }>, import("mongoose").Document<unknown, {}, import("src/contents/schemas/content.schema").Contents> & import("src/contents/schemas/content.schema").Contents & Required<{
+        _id: string;
+=======
         _id: import("mongoose").Types.ObjectId;
     }>>;
     findAll(): Promise<(import("mongoose").Document<unknown, {}, import("src/contents/schemas/content.schema").Contents> & import("src/contents/schemas/content.schema").Contents & Required<{
@@ -45,5 +58,6 @@ export declare class ContentsController {
         _id: import("mongoose").Types.ObjectId;
     }>, import("mongoose").Document<unknown, {}, import("src/contents/schemas/content.schema").Contents> & import("src/contents/schemas/content.schema").Contents & Required<{
         _id: import("mongoose").Types.ObjectId;
+>>>>>>> main
     }>, {}, import("src/contents/schemas/content.schema").Contents, "findOneAndUpdate">;
 }

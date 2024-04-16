@@ -29,9 +29,14 @@ let PreviewService = class PreviewService {
         let preview = await this.previewtModel.find();
         return preview;
     }
+<<<<<<< HEAD
+    create(createCategorieDto) {
+        let preview = new this.previewtModel(createCategorieDto);
+=======
     async create(createCategorieDto) {
         let preview = await this.previewtModel.create(createCategorieDto);
         return preview;
+>>>>>>> main
     }
     update(id, updatePreview) {
         let preview = this.previewtModel.findByIdAndUpdate(id, updatePreview, {

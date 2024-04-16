@@ -29,9 +29,14 @@ let ObservationsService = class ObservationsService {
         let observations = await this.observationstModel.find();
         return observations;
     }
+<<<<<<< HEAD
+    create(createObservationsDto) {
+        let observations = new this.observationstModel(createObservationsDto);
+=======
     async create(createObservationsDto) {
         let observations = await this.observationstModel.create(createObservationsDto);
         return observations;
+>>>>>>> main
     }
     update(id, updateObservations) {
         let observations = this.observationstModel.findByIdAndUpdate(id, updateObservations, { new: true });

@@ -29,12 +29,20 @@ let HyperlinksService = class HyperlinksService {
         let hyperlinks = await this.hyperlinkstModel.find();
         return hyperlinks;
     }
+<<<<<<< HEAD
+    create(createHyperlinkDto) {
+        let hyperlinks = new this.hyperlinkstModel(createHyperlinkDto);
+    }
+    update(id, createHyperlinkDto) {
+        let hyperlinks = this.hyperlinkstModel.findByIdAndUpdate(id, createHyperlinkDto, { new: true });
+=======
     async create(createHyperlinkDto) {
         let hyperlinks = await this.hyperlinkstModel.create(createHyperlinkDto);
         return hyperlinks;
     }
     update(id, updateHyperlinkDto) {
         let hyperlinks = this.hyperlinkstModel.findByIdAndUpdate(id, updateHyperlinkDto, { new: true });
+>>>>>>> main
         return hyperlinks;
     }
     delete(id) {

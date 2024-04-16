@@ -37,8 +37,8 @@ let MultimediaController = class MultimediaController {
 };
 exports.MultimediaController = MultimediaController;
 __decorate([
-    (0, common_1.Get)(':id'),
-    __param(0, (0, common_1.Param)('id')),
+    (0, common_1.Get)(":id"),
+    __param(0, (0, common_1.Param)("id")),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", [Number]),
     __metadata("design:returntype", void 0)
@@ -57,22 +57,22 @@ __decorate([
     __metadata("design:returntype", void 0)
 ], MultimediaController.prototype, "create", null);
 __decorate([
-    (0, common_1.Patch)(':id'),
-    __param(0, (0, common_1.Param)('id')),
+    (0, common_1.Patch)(":id"),
+    __param(0, (0, common_1.Param)("id")),
     __param(1, (0, common_1.Body)()),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", [Number, Object]),
     __metadata("design:returntype", void 0)
 ], MultimediaController.prototype, "update", null);
 __decorate([
-    (0, common_1.Delete)(':id'),
-    __param(0, (0, common_1.Param)('id')),
+    (0, common_1.Delete)(":id"),
+    __param(0, (0, common_1.Param)("id")),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", [Number]),
     __metadata("design:returntype", void 0)
 ], MultimediaController.prototype, "delete", null);
 exports.MultimediaController = MultimediaController = __decorate([
-    (0, common_1.Controller)('multimedia'),
+    (0, common_1.Controller)("multimedia"),
     __metadata("design:paramtypes", [multimedia_service_1.MultimediaService])
 ], MultimediaController);
 //# sourceMappingURL=multimedia.controller.js.map

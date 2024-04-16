@@ -23,6 +23,28 @@
 /// <reference types="mongoose/types/virtuals" />
 /// <reference types="mongoose" />
 /// <reference types="mongoose/types/inferschematype" />
+<<<<<<< HEAD
+import { PublicationService } from './publication.service';
+export declare class PublicationController {
+    private readonly publicationService;
+    constructor(publicationService: PublicationService);
+    findOne(id: number): Promise<import("mongoose").Document<unknown, {}, import("src/publication/schemas/publication.schema").Publication> & import("src/publication/schemas/publication.schema").Publication & Required<{
+        _id: string;
+    }>>;
+    findAll(): Promise<(import("mongoose").Document<unknown, {}, import("src/publication/schemas/publication.schema").Publication> & import("src/publication/schemas/publication.schema").Publication & Required<{
+        _id: string;
+    }>)[]>;
+    create(createPublicationDto: any): void;
+    update(id: number, updatePublication: any): import("mongoose").Query<import("mongoose").Document<unknown, {}, import("src/publication/schemas/publication.schema").Publication> & import("src/publication/schemas/publication.schema").Publication & Required<{
+        _id: string;
+    }>, import("mongoose").Document<unknown, {}, import("src/publication/schemas/publication.schema").Publication> & import("src/publication/schemas/publication.schema").Publication & Required<{
+        _id: string;
+    }>, {}, import("src/publication/schemas/publication.schema").Publication, "findOneAndUpdate">;
+    delete(id: number): import("mongoose").Query<import("mongoose").Document<unknown, {}, import("src/publication/schemas/publication.schema").Publication> & import("src/publication/schemas/publication.schema").Publication & Required<{
+        _id: string;
+    }>, import("mongoose").Document<unknown, {}, import("src/publication/schemas/publication.schema").Publication> & import("src/publication/schemas/publication.schema").Publication & Required<{
+        _id: string;
+=======
 import { PublicationService } from "./publication.service";
 export declare class PublicationController {
     private readonly publicationService;
@@ -45,5 +67,6 @@ export declare class PublicationController {
         _id: import("mongoose").Types.ObjectId;
     }>, import("mongoose").Document<unknown, {}, import("src/publication/schemas/publication.schema").Publication> & import("src/publication/schemas/publication.schema").Publication & Required<{
         _id: import("mongoose").Types.ObjectId;
+>>>>>>> main
     }>, {}, import("src/publication/schemas/publication.schema").Publication, "findOneAndUpdate">;
 }

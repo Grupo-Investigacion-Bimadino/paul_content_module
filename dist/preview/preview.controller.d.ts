@@ -28,6 +28,23 @@ export declare class PreviewController {
     private readonly previewService;
     constructor(previewService: PreviewService);
     findOne(id: number): Promise<import("mongoose").Document<unknown, {}, import("src/preview/schemas/preview.schema").Preview> & import("src/preview/schemas/preview.schema").Preview & Required<{
+<<<<<<< HEAD
+        _id: string;
+    }>>;
+    findAll(): Promise<(import("mongoose").Document<unknown, {}, import("src/preview/schemas/preview.schema").Preview> & import("src/preview/schemas/preview.schema").Preview & Required<{
+        _id: string;
+    }>)[]>;
+    create(createPreviewDto: any): void;
+    update(id: number, updatePreview: any): import("mongoose").Query<import("mongoose").Document<unknown, {}, import("src/preview/schemas/preview.schema").Preview> & import("src/preview/schemas/preview.schema").Preview & Required<{
+        _id: string;
+    }>, import("mongoose").Document<unknown, {}, import("src/preview/schemas/preview.schema").Preview> & import("src/preview/schemas/preview.schema").Preview & Required<{
+        _id: string;
+    }>, {}, import("src/preview/schemas/preview.schema").Preview, "findOneAndUpdate">;
+    delete(id: number): import("mongoose").Query<import("mongoose").Document<unknown, {}, import("src/preview/schemas/preview.schema").Preview> & import("src/preview/schemas/preview.schema").Preview & Required<{
+        _id: string;
+    }>, import("mongoose").Document<unknown, {}, import("src/preview/schemas/preview.schema").Preview> & import("src/preview/schemas/preview.schema").Preview & Required<{
+        _id: string;
+=======
         _id: import("mongoose").Types.ObjectId;
     }>>;
     findAll(): Promise<(import("mongoose").Document<unknown, {}, import("src/preview/schemas/preview.schema").Preview> & import("src/preview/schemas/preview.schema").Preview & Required<{
@@ -45,5 +62,6 @@ export declare class PreviewController {
         _id: import("mongoose").Types.ObjectId;
     }>, import("mongoose").Document<unknown, {}, import("src/preview/schemas/preview.schema").Preview> & import("src/preview/schemas/preview.schema").Preview & Required<{
         _id: import("mongoose").Types.ObjectId;
+>>>>>>> main
     }>, {}, import("src/preview/schemas/preview.schema").Preview, "findOneAndUpdate">;
 }

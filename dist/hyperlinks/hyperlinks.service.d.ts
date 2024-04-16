@@ -28,6 +28,23 @@ export declare class HyperlinksService {
     private hyperlinkstModel;
     constructor(hyperlinkstModel: Model<Hyperlinks>);
     findOne(id: number): Promise<import("mongoose").Document<unknown, {}, Hyperlinks> & Hyperlinks & Required<{
+<<<<<<< HEAD
+        _id: string;
+    }>>;
+    findAll(): Promise<(import("mongoose").Document<unknown, {}, Hyperlinks> & Hyperlinks & Required<{
+        _id: string;
+    }>)[]>;
+    create(createHyperlinkDto: any): void;
+    update(id: any, createHyperlinkDto: any): import("mongoose").Query<import("mongoose").Document<unknown, {}, Hyperlinks> & Hyperlinks & Required<{
+        _id: string;
+    }>, import("mongoose").Document<unknown, {}, Hyperlinks> & Hyperlinks & Required<{
+        _id: string;
+    }>, {}, Hyperlinks, "findOneAndUpdate">;
+    delete(id: any): import("mongoose").Query<import("mongoose").Document<unknown, {}, Hyperlinks> & Hyperlinks & Required<{
+        _id: string;
+    }>, import("mongoose").Document<unknown, {}, Hyperlinks> & Hyperlinks & Required<{
+        _id: string;
+=======
         _id: import("mongoose").Types.ObjectId;
     }>>;
     findAll(): Promise<(import("mongoose").Document<unknown, {}, Hyperlinks> & Hyperlinks & Required<{
@@ -45,5 +62,6 @@ export declare class HyperlinksService {
         _id: import("mongoose").Types.ObjectId;
     }>, import("mongoose").Document<unknown, {}, Hyperlinks> & Hyperlinks & Required<{
         _id: import("mongoose").Types.ObjectId;
+>>>>>>> main
     }>, {}, Hyperlinks, "findOneAndUpdate">;
 }

@@ -13,7 +13,11 @@ export class Categories extends Document {
     @Prop()
     description: string;
 
+<<<<<<< HEAD
+    @Prop({type: [String]})  // Define tags como un array de strings 
+=======
     @Prop({ type: [String] }) // Esto especifica que `tags` es un arreglo de strings.
+>>>>>>> main
     tags: string[];
 }
 

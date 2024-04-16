@@ -23,7 +23,7 @@
 /// <reference types="mongoose/types/virtuals" />
 /// <reference types="mongoose" />
 /// <reference types="mongoose/types/inferschematype" />
-import { MultimediaService } from './multimedia.service';
+import { MultimediaService } from "./multimedia.service";
 export declare class MultimediaController {
     private readonly multimediaService;
     constructor(multimediaService: MultimediaService);

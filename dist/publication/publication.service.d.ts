@@ -27,6 +27,24 @@ import { Publication } from "../publication/schemas/publication.schema";
 export declare class PublicationService {
     private publicationtModel;
     constructor(publicationtModel: Model<Publication>);
+<<<<<<< HEAD
+    findOne(id: number): Promise<import("mongoose").Document<unknown, {}, Publication> & Publication & Required<{
+        _id: string;
+    }>>;
+    findAll(): Promise<(import("mongoose").Document<unknown, {}, Publication> & Publication & Required<{
+        _id: string;
+    }>)[]>;
+    create(createPublicationsDto: any): void;
+    update(id: any, updatePublications: any): import("mongoose").Query<import("mongoose").Document<unknown, {}, Publication> & Publication & Required<{
+        _id: string;
+    }>, import("mongoose").Document<unknown, {}, Publication> & Publication & Required<{
+        _id: string;
+    }>, {}, Publication, "findOneAndUpdate">;
+    delete(id: any): import("mongoose").Query<import("mongoose").Document<unknown, {}, Publication> & Publication & Required<{
+        _id: string;
+    }>, import("mongoose").Document<unknown, {}, Publication> & Publication & Required<{
+        _id: string;
+=======
     findOne(id: string): Promise<import("mongoose").Document<unknown, {}, Publication> & Publication & Required<{
         _id: import("mongoose").Types.ObjectId;
     }>>;
@@ -45,5 +63,6 @@ export declare class PublicationService {
         _id: import("mongoose").Types.ObjectId;
     }>, import("mongoose").Document<unknown, {}, Publication> & Publication & Required<{
         _id: import("mongoose").Types.ObjectId;
+>>>>>>> main
     }>, {}, Publication, "findOneAndUpdate">;
 }
