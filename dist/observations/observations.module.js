@@ -10,11 +10,17 @@ exports.ObservationsModule = void 0;
 const common_1 = require("@nestjs/common");
 const observations_controller_1 = require("./observations.controller");
 const observations_service_1 = require("./observations.service");
+const mongoose_1 = require("@nestjs/mongoose");
+const observations_schema_1 = require("../observations/schemas/observations.schema");
+const observations_schema_2 = require("../observations/schemas/observations.schema");
 let ObservationsModule = class ObservationsModule {
 };
 exports.ObservationsModule = ObservationsModule;
 exports.ObservationsModule = ObservationsModule = __decorate([
     (0, common_1.Module)({
+        imports: [
+            mongoose_1.MongooseModule.forFeature([{ name: observations_schema_2.Observations.name, schema: observations_schema_1.ObservationsSchema }]),
+        ],
         controllers: [observations_controller_1.ObservationsController],
         providers: [observations_service_1.ObservationsService]
     })

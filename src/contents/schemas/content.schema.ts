@@ -6,8 +6,7 @@ import  mongoose, {Document} from 'mongoose';
 })
 
 export class Contents extends Document {
-    @Prop()
-    _id: string;
+    _id: mongoose.Types.ObjectId;
 
     @Prop()
     title: string;
@@ -15,7 +14,7 @@ export class Contents extends Document {
     @Prop()
     text: string;
 
-    @Prop({type: mongoose.Schema.Types.ObjectId, ref: 'User'})
+    @Prop(/* {type: mongoose.Schema.Types.ObjectId, ref: 'User'} */)
     author: string;
 
     @Prop()
@@ -24,8 +23,11 @@ export class Contents extends Document {
     @Prop()
     modificationdate: Date;
 
-    @Prop({type: String, enum:['DRAFT', 'PUBLISHED', 'DELETE'], default: 'DRAFT'})
+    @Prop(/* {type: String, enum:['DRAFT', 'PUBLISHED', 'DELETE'], default: 'DRAFT'} */)
     status: string;
+
+    @Prop()
+    contenttype: string;
 }
 
 export const ContentSchema = SchemaFactory.createForClass(Contents);

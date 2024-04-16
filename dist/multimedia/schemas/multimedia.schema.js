@@ -18,10 +18,6 @@ exports.Multimedia = Multimedia;
 __decorate([
     (0, mongoose_1.Prop)(),
     __metadata("design:type", String)
-], Multimedia.prototype, "_id", void 0);
-__decorate([
-    (0, mongoose_1.Prop)(),
-    __metadata("design:type", String)
 ], Multimedia.prototype, "file_name", void 0);
 __decorate([
     (0, mongoose_1.Prop)(),
@@ -29,7 +25,7 @@ __decorate([
 ], Multimedia.prototype, "file_type", void 0);
 __decorate([
     (0, mongoose_1.Prop)(),
-    __metadata("design:type", Number)
+    __metadata("design:type", String)
 ], Multimedia.prototype, "file_size", void 0);
 __decorate([
     (0, mongoose_1.Prop)(),

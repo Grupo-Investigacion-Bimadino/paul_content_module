@@ -28,20 +28,22 @@ export declare class MultimediaService {
     private multimediatModel;
     constructor(multimediatModel: Model<Multimedia>);
     findOne(id: number): Promise<import("mongoose").Document<unknown, {}, Multimedia> & Multimedia & Required<{
-        _id: string;
+        _id: import("mongoose").Types.ObjectId;
     }>>;
     findAll(): Promise<(import("mongoose").Document<unknown, {}, Multimedia> & Multimedia & Required<{
-        _id: string;
+        _id: import("mongoose").Types.ObjectId;
     }>)[]>;
-    create(createMultimediaDto: any): void;
+    create(createMultimediaDto: any): Promise<import("mongoose").Document<unknown, {}, Multimedia> & Multimedia & Required<{
+        _id: import("mongoose").Types.ObjectId;
+    }>>;
     update(id: any, updateMultimedia: any): import("mongoose").Query<import("mongoose").Document<unknown, {}, Multimedia> & Multimedia & Required<{
-        _id: string;
+        _id: import("mongoose").Types.ObjectId;
     }>, import("mongoose").Document<unknown, {}, Multimedia> & Multimedia & Required<{
-        _id: string;
+        _id: import("mongoose").Types.ObjectId;
     }>, {}, Multimedia, "findOneAndUpdate">;
     delete(id: any): import("mongoose").Query<import("mongoose").Document<unknown, {}, Multimedia> & Multimedia & Required<{
-        _id: string;
+        _id: import("mongoose").Types.ObjectId;
     }>, import("mongoose").Document<unknown, {}, Multimedia> & Multimedia & Required<{
-        _id: string;
+        _id: import("mongoose").Types.ObjectId;
     }>, {}, Multimedia, "findOneAndDelete">;
 }

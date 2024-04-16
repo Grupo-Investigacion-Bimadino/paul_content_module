@@ -24,12 +24,12 @@
 /// <reference types="mongoose/types/inferschematype" />
 import mongoose, { Document } from 'mongoose';
 export declare class Preview extends Document {
-    _id: string;
+    _id: mongoose.Types.ObjectId;
     preview_url: string;
-    associated_content: object;
+    associated_content: string[];
 }
 export declare const PreviewSchema: mongoose.Schema<Preview, mongoose.Model<Preview, any, any, any, mongoose.Document<unknown, any, Preview> & Preview & Required<{
-    _id: string;
+    _id: mongoose.Types.ObjectId;
 }>, any>, {}, {}, {}, {}, mongoose.DefaultSchemaOptions, Preview, mongoose.Document<unknown, {}, mongoose.FlatRecord<Preview>> & mongoose.FlatRecord<Preview> & Required<{
-    _id: string;
+    _id: mongoose.Types.ObjectId;
 }>>;

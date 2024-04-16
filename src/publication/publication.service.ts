@@ -9,7 +9,7 @@ export class PublicationService {
 		@InjectModel(Publication.name) private publicationtModel: Model<Publication>
 	) {}
 
-	async findOne(id: number) {
+	async findOne(id: string) {
 		let publication = await this.publicationtModel.findById(id);
 		return publication;
 	}
@@ -19,8 +19,9 @@ export class PublicationService {
 		return publication;
 	}
 
-	create(createPublicationsDto) {
-		let publication = new this.publicationtModel(createPublicationsDto);
+	async create(createPublicationsDto) {
+		let publication = await this.publicationtModel.create(createPublicationsDto);
+		return publication;
 	}
 	update(id, updatePublications) {
 		let publication = this.publicationtModel.findByIdAndUpdate(

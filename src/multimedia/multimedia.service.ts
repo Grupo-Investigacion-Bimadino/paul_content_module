@@ -21,8 +21,9 @@ export class MultimediaService {
         return multimedia;
     }
 
-    create(createMultimediaDto) {
-        let multimedia = new this.multimediatModel(createMultimediaDto);
+    async create(createMultimediaDto) {
+        let multimedia = await this.multimediatModel.create(createMultimediaDto);
+        return multimedia;
     }
 
     update(id, updateMultimedia) {

@@ -18,10 +18,6 @@ exports.Hyperlinks = Hyperlinks;
 __decorate([
     (0, mongoose_1.Prop)(),
     __metadata("design:type", String)
-], Hyperlinks.prototype, "_id", void 0);
-__decorate([
-    (0, mongoose_1.Prop)(),
-    __metadata("design:type", String)
 ], Hyperlinks.prototype, "url", void 0);
 __decorate([
     (0, mongoose_1.Prop)(),

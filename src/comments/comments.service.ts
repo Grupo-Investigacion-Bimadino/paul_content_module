@@ -18,8 +18,10 @@ export class CommentsService {
 		return comments;
 	}
 
-	create(createCommentDto) {
-		let comments = new this.commentstModel(createCommentDto);
+	async create(createCommentDto) {
+		let comments = await  this.commentstModel.create(createCommentDto);
+		return comments;
+		
 	}
 	update(id, updateComment) {
 		let comments = this.commentstModel.findByIdAndUpdate(id, updateComment, {

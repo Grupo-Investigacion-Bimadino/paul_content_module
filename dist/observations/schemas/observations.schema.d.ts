@@ -24,14 +24,14 @@
 /// <reference types="mongoose/types/inferschematype" />
 import mongoose, { Document } from 'mongoose';
 export declare class Observations extends Document {
-    _id: string;
+    _id: mongoose.Types.ObjectId;
     review_date: Date;
     review_author: string;
     observation: string;
     observation_type: string;
 }
 export declare const ObservationsSchema: mongoose.Schema<Observations, mongoose.Model<Observations, any, any, any, mongoose.Document<unknown, any, Observations> & Observations & Required<{
-    _id: string;
+    _id: mongoose.Types.ObjectId;
 }>, any>, {}, {}, {}, {}, mongoose.DefaultSchemaOptions, Observations, mongoose.Document<unknown, {}, mongoose.FlatRecord<Observations>> & mongoose.FlatRecord<Observations> & Required<{
-    _id: string;
+    _id: mongoose.Types.ObjectId;
 }>>;

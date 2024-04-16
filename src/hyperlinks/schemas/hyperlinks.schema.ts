@@ -5,8 +5,7 @@ import mongoose, { Document } from 'mongoose';
     timestamps: true
 })
 export class Hyperlinks extends Document {
-    @Prop()
-    _id: string;
+    _id: mongoose.Types.ObjectId;
 
     @Prop()
     url: string;

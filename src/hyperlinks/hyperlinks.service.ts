@@ -19,13 +19,14 @@ export class HyperlinksService {
 		return hyperlinks;
 	}
 
-	create(createHyperlinkDto) {
-		let hyperlinks = new this.hyperlinkstModel(createHyperlinkDto);
+	async create(createHyperlinkDto) {
+		let hyperlinks = await this.hyperlinkstModel.create(createHyperlinkDto);
+		return hyperlinks;
 	}
-	update(id, createHyperlinkDto) {
+	update(id, updateHyperlinkDto) {
 		let hyperlinks = this.hyperlinkstModel.findByIdAndUpdate(
 			id,
-			createHyperlinkDto,
+			updateHyperlinkDto,
 			{ new: true }
 		);
 		return hyperlinks;

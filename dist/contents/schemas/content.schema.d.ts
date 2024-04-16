@@ -23,17 +23,18 @@
 /// <reference types="mongoose/types/virtuals" />
 /// <reference types="mongoose/types/inferschematype" />
 import mongoose, { Document } from 'mongoose';
-export declare class contents extends Document {
-    _id: string;
+export declare class Contents extends Document {
+    _id: mongoose.Types.ObjectId;
     title: string;
     text: string;
     author: string;
     creationdate: Date;
     modificationdate: Date;
     status: string;
+    contenttype: string;
 }
-export declare const ContentSchema: mongoose.Schema<contents, mongoose.Model<contents, any, any, any, mongoose.Document<unknown, any, contents> & contents & Required<{
-    _id: string;
-}>, any>, {}, {}, {}, {}, mongoose.DefaultSchemaOptions, contents, mongoose.Document<unknown, {}, mongoose.FlatRecord<contents>> & mongoose.FlatRecord<contents> & Required<{
-    _id: string;
+export declare const ContentSchema: mongoose.Schema<Contents, mongoose.Model<Contents, any, any, any, mongoose.Document<unknown, any, Contents> & Contents & Required<{
+    _id: mongoose.Types.ObjectId;
+}>, any>, {}, {}, {}, {}, mongoose.DefaultSchemaOptions, Contents, mongoose.Document<unknown, {}, mongoose.FlatRecord<Contents>> & mongoose.FlatRecord<Contents> & Required<{
+    _id: mongoose.Types.ObjectId;
 }>>;
