@@ -9,44 +9,44 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.ContentSchema = exports.contents = void 0;
+exports.ContentSchema = exports.Contents = void 0;
 const mongoose_1 = require("@nestjs/mongoose");
 const mongoose_2 = require("mongoose");
-let contents = class contents extends mongoose_2.Document {
+let Contents = class Contents extends mongoose_2.Document {
 };
-exports.contents = contents;
+exports.Contents = Contents;
 __decorate([
     (0, mongoose_1.Prop)(),
     __metadata("design:type", String)
-], contents.prototype, "_id", void 0);
+], Contents.prototype, "_id", void 0);
 __decorate([
     (0, mongoose_1.Prop)(),
     __metadata("design:type", String)
-], contents.prototype, "title", void 0);
+], Contents.prototype, "title", void 0);
 __decorate([
     (0, mongoose_1.Prop)(),
     __metadata("design:type", String)
-], contents.prototype, "text", void 0);
+], Contents.prototype, "text", void 0);
 __decorate([
     (0, mongoose_1.Prop)({ type: mongoose_2.default.Schema.Types.ObjectId, ref: 'User' }),
     __metadata("design:type", String)
-], contents.prototype, "author", void 0);
+], Contents.prototype, "author", void 0);
 __decorate([
     (0, mongoose_1.Prop)(),
     __metadata("design:type", Date)
-], contents.prototype, "creationdate", void 0);
+], Contents.prototype, "creationdate", void 0);
 __decorate([
     (0, mongoose_1.Prop)(),
     __metadata("design:type", Date)
-], contents.prototype, "modificationdate", void 0);
+], Contents.prototype, "modificationdate", void 0);
 __decorate([
     (0, mongoose_1.Prop)({ type: String, enum: ['DRAFT', 'PUBLISHED', 'DELETE'], default: 'DRAFT' }),
     __metadata("design:type", String)
-], contents.prototype, "status", void 0);
-exports.contents = contents = __decorate([
+], Contents.prototype, "status", void 0);
+exports.Contents = Contents = __decorate([
     (0, mongoose_1.Schema)({
         timestamps: true
     })
-], contents);
-exports.ContentSchema = mongoose_1.SchemaFactory.createForClass(contents);
+], Contents);
+exports.ContentSchema = mongoose_1.SchemaFactory.createForClass(Contents);
 //# sourceMappingURL=content.schema.js.map

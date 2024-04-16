@@ -14,8 +14,8 @@ export class Categories extends Document {
     @Prop()
     description: string;
 
-    @Prop()
-    tags: object;
+    @Prop({type: [String]})  // Define tags como un array de strings 
+    tags: string[];
 }
 
 export const CategoriesSchema = SchemaFactory.createForClass(Categories);

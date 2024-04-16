@@ -23,7 +23,7 @@
 /// <reference types="mongoose/types/virtuals" />
 /// <reference types="mongoose/types/inferschematype" />
 import mongoose, { Document } from 'mongoose';
-export declare class contents extends Document {
+export declare class Contents extends Document {
     _id: string;
     title: string;
     text: string;
@@ -32,8 +32,8 @@ export declare class contents extends Document {
     modificationdate: Date;
     status: string;
 }
-export declare const ContentSchema: mongoose.Schema<contents, mongoose.Model<contents, any, any, any, mongoose.Document<unknown, any, contents> & contents & Required<{
+export declare const ContentSchema: mongoose.Schema<Contents, mongoose.Model<Contents, any, any, any, mongoose.Document<unknown, any, Contents> & Contents & Required<{
     _id: string;
-}>, any>, {}, {}, {}, {}, mongoose.DefaultSchemaOptions, contents, mongoose.Document<unknown, {}, mongoose.FlatRecord<contents>> & mongoose.FlatRecord<contents> & Required<{
+}>, any>, {}, {}, {}, {}, mongoose.DefaultSchemaOptions, Contents, mongoose.Document<unknown, {}, mongoose.FlatRecord<Contents>> & mongoose.FlatRecord<Contents> & Required<{
     _id: string;
 }>>;

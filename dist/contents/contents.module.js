@@ -10,11 +10,17 @@ exports.ContentsModule = void 0;
 const common_1 = require("@nestjs/common");
 const contents_controller_1 = require("./contents.controller");
 const contents_service_1 = require("./contents.service");
+const mongoose_1 = require("@nestjs/mongoose");
+const content_schema_1 = require("../contents/schemas/content.schema");
+const content_schema_2 = require("../contents/schemas/content.schema");
 let ContentsModule = class ContentsModule {
 };
 exports.ContentsModule = ContentsModule;
 exports.ContentsModule = ContentsModule = __decorate([
     (0, common_1.Module)({
+        imports: [
+            mongoose_1.MongooseModule.forFeature([{ name: content_schema_2.Contents.name, schema: content_schema_1.ContentSchema }]),
+        ],
         controllers: [contents_controller_1.ContentsController],
         providers: [contents_service_1.ContentsService]
     })

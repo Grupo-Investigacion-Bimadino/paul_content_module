@@ -14,23 +14,23 @@ import {
     constructor(private readonly publicationService: PublicationService) {}
     // find one by id findOne(id)
     @Get(':id')
-    findOne(@Param('id') id: number): string {
+    findOne(@Param('id') id: number) {
     return this.publicationService.findOne(id);
     }
     @Get()
-    findAll(): string {
+    findAll() {
     return this.publicationService.findAll();
     }
     @Post()
-    create(@Body() createPublicationDto): string {
+    create(@Body() createPublicationDto) {
     return this.publicationService.create(createPublicationDto);
     }
     @Patch(':id')
-    update(@Param('id') id: number, @Body() updatePublication): string {
+    update(@Param('id') id: number, @Body() updatePublication) {
     return this.publicationService.update(id, updatePublication);
     }
     @Delete(':id')
-    delete(@Param('id') id: number): string {
+    delete(@Param('id') id: number) {
     return this.publicationService.delete(id);
     }
     }  

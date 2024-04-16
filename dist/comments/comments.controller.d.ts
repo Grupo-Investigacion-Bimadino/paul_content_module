@@ -1,10 +1,47 @@
+/// <reference types="mongoose/types/aggregate" />
+/// <reference types="mongoose/types/callback" />
+/// <reference types="mongoose/types/collection" />
+/// <reference types="mongoose/types/connection" />
+/// <reference types="mongoose/types/cursor" />
+/// <reference types="mongoose/types/document" />
+/// <reference types="mongoose/types/error" />
+/// <reference types="mongoose/types/expressions" />
+/// <reference types="mongoose/types/helpers" />
+/// <reference types="mongoose/types/middlewares" />
+/// <reference types="mongoose/types/indexes" />
+/// <reference types="mongoose/types/models" />
+/// <reference types="mongoose/types/mongooseoptions" />
+/// <reference types="mongoose/types/pipelinestage" />
+/// <reference types="mongoose/types/populate" />
+/// <reference types="mongoose/types/query" />
+/// <reference types="mongoose/types/schemaoptions" />
+/// <reference types="mongoose/types/schematypes" />
+/// <reference types="mongoose/types/session" />
+/// <reference types="mongoose/types/types" />
+/// <reference types="mongoose/types/utility" />
+/// <reference types="mongoose/types/validation" />
+/// <reference types="mongoose/types/virtuals" />
+/// <reference types="mongoose" />
+/// <reference types="mongoose/types/inferschematype" />
 import { CommentsService } from './comments.service';
 export declare class CommentsController {
     private readonly commentService;
     constructor(commentService: CommentsService);
-    findOne(id: number): string;
-    findAll(): string;
-    create(createCommentDto: any): string;
-    update(id: number, updateComment: any): string;
-    delete(id: number): string;
+    findOne(id: number): Promise<import("mongoose").Document<unknown, {}, import("src/comments/schemas/comments.schema").Comments> & import("src/comments/schemas/comments.schema").Comments & Required<{
+        _id: string;
+    }>>;
+    findAll(): Promise<(import("mongoose").Document<unknown, {}, import("src/comments/schemas/comments.schema").Comments> & import("src/comments/schemas/comments.schema").Comments & Required<{
+        _id: string;
+    }>)[]>;
+    create(createCommentDto: any): void;
+    update(id: number, updateComment: any): import("mongoose").Query<import("mongoose").Document<unknown, {}, import("src/comments/schemas/comments.schema").Comments> & import("src/comments/schemas/comments.schema").Comments & Required<{
+        _id: string;
+    }>, import("mongoose").Document<unknown, {}, import("src/comments/schemas/comments.schema").Comments> & import("src/comments/schemas/comments.schema").Comments & Required<{
+        _id: string;
+    }>, {}, import("src/comments/schemas/comments.schema").Comments, "findOneAndUpdate">;
+    delete(id: number): import("mongoose").Query<import("mongoose").Document<unknown, {}, import("src/comments/schemas/comments.schema").Comments> & import("src/comments/schemas/comments.schema").Comments & Required<{
+        _id: string;
+    }>, import("mongoose").Document<unknown, {}, import("src/comments/schemas/comments.schema").Comments> & import("src/comments/schemas/comments.schema").Comments & Required<{
+        _id: string;
+    }>, {}, import("src/comments/schemas/comments.schema").Comments, "findOneAndUpdate">;
 }

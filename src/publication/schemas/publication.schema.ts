@@ -11,7 +11,7 @@ export class Publication extends Document {
     @Prop()
     publish_start_date: Date;
 
-    @Prop()
+    @Prop([String])  // Define associated_content como un array de strings
     associated_content: object;
 }
 

@@ -27,7 +27,7 @@ export declare class Categories extends Document {
     _id: string;
     name: string;
     description: string;
-    tags: object;
+    tags: string[];
 }
 export declare const CategoriesSchema: mongoose.Schema<Categories, mongoose.Model<Categories, any, any, any, mongoose.Document<unknown, any, Categories> & Categories & Required<{
     _id: string;

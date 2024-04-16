@@ -11,7 +11,7 @@ export class Preview extends Document {
     @Prop()
     preview_url: string;
 
-    @Prop()
+    @Prop([String])  // Define associated_content como un array de strings
     associated_content: object;
 }
 

@@ -14,23 +14,23 @@ import {
     constructor(private readonly commentService: CommentsService) {}
     // find one by id findOne(id)
     @Get(':id')
-    findOne(@Param('id') id: number): string {
+    findOne(@Param('id') id: number) {
     return this.commentService.findOne(id);
     }
     @Get()
-    findAll(): string {
+    findAll() {
     return this.commentService.findAll();
     }
     @Post()
-    create(@Body() createCommentDto): string {
+    create(@Body() createCommentDto) {
     return this.commentService.create(createCommentDto);
     }
     @Patch(':id')
-    update(@Param('id') id: number, @Body() updateComment): string {
+    update(@Param('id') id: number, @Body() updateComment) {
     return this.commentService.update(id, updateComment);
     }
     @Delete(':id')
-    delete(@Param('id') id: number): string {
+    delete(@Param('id') id: number) {
     return this.commentService.delete(id);
     }
     }

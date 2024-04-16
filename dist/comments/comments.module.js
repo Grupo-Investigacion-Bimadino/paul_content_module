@@ -10,11 +10,17 @@ exports.CommentsModule = void 0;
 const common_1 = require("@nestjs/common");
 const comments_controller_1 = require("./comments.controller");
 const comments_service_1 = require("./comments.service");
+const mongoose_1 = require("@nestjs/mongoose");
+const comments_schema_1 = require("../comments/schemas/comments.schema");
+const comments_schema_2 = require("../comments/schemas/comments.schema");
 let CommentsModule = class CommentsModule {
 };
 exports.CommentsModule = CommentsModule;
 exports.CommentsModule = CommentsModule = __decorate([
     (0, common_1.Module)({
+        imports: [
+            mongoose_1.MongooseModule.forFeature([{ name: comments_schema_2.Comments.name, schema: comments_schema_1.CommentSchema }]),
+        ],
         controllers: [comments_controller_1.CommentsController],
         providers: [comments_service_1.CommentsService]
     })
