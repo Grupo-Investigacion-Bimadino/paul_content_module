@@ -28,6 +28,7 @@ export declare class HyperlinksController {
     private readonly hyperlinkService;
     constructor(hyperlinkService: HyperlinksService);
     findOne(id: number): Promise<import("mongoose").Document<unknown, {}, import("src/hyperlinks/schemas/hyperlinks.schema").Hyperlinks> & import("src/hyperlinks/schemas/hyperlinks.schema").Hyperlinks & Required<{
+<<<<<<< HEAD
         _id: string;
     }>>;
     findAll(): Promise<(import("mongoose").Document<unknown, {}, import("src/hyperlinks/schemas/hyperlinks.schema").Hyperlinks> & import("src/hyperlinks/schemas/hyperlinks.schema").Hyperlinks & Required<{
@@ -43,5 +44,24 @@ export declare class HyperlinksController {
         _id: string;
     }>, import("mongoose").Document<unknown, {}, import("src/hyperlinks/schemas/hyperlinks.schema").Hyperlinks> & import("src/hyperlinks/schemas/hyperlinks.schema").Hyperlinks & Required<{
         _id: string;
+=======
+        _id: import("mongoose").Types.ObjectId;
+    }>>;
+    findAll(): Promise<(import("mongoose").Document<unknown, {}, import("src/hyperlinks/schemas/hyperlinks.schema").Hyperlinks> & import("src/hyperlinks/schemas/hyperlinks.schema").Hyperlinks & Required<{
+        _id: import("mongoose").Types.ObjectId;
+    }>)[]>;
+    create(createHyperlinkDto: any): Promise<import("mongoose").Document<unknown, {}, import("src/hyperlinks/schemas/hyperlinks.schema").Hyperlinks> & import("src/hyperlinks/schemas/hyperlinks.schema").Hyperlinks & Required<{
+        _id: import("mongoose").Types.ObjectId;
+    }>>;
+    update(id: number, updateHyperlink: any): import("mongoose").Query<import("mongoose").Document<unknown, {}, import("src/hyperlinks/schemas/hyperlinks.schema").Hyperlinks> & import("src/hyperlinks/schemas/hyperlinks.schema").Hyperlinks & Required<{
+        _id: import("mongoose").Types.ObjectId;
+    }>, import("mongoose").Document<unknown, {}, import("src/hyperlinks/schemas/hyperlinks.schema").Hyperlinks> & import("src/hyperlinks/schemas/hyperlinks.schema").Hyperlinks & Required<{
+        _id: import("mongoose").Types.ObjectId;
+    }>, {}, import("src/hyperlinks/schemas/hyperlinks.schema").Hyperlinks, "findOneAndUpdate">;
+    delete(id: number): import("mongoose").Query<import("mongoose").Document<unknown, {}, import("src/hyperlinks/schemas/hyperlinks.schema").Hyperlinks> & import("src/hyperlinks/schemas/hyperlinks.schema").Hyperlinks & Required<{
+        _id: import("mongoose").Types.ObjectId;
+    }>, import("mongoose").Document<unknown, {}, import("src/hyperlinks/schemas/hyperlinks.schema").Hyperlinks> & import("src/hyperlinks/schemas/hyperlinks.schema").Hyperlinks & Required<{
+        _id: import("mongoose").Types.ObjectId;
+>>>>>>> main
     }>, {}, import("src/hyperlinks/schemas/hyperlinks.schema").Hyperlinks, "findOneAndUpdate">;
 }

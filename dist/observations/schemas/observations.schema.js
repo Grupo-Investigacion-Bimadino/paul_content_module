@@ -17,10 +17,6 @@ let Observations = class Observations extends mongoose_2.Document {
 exports.Observations = Observations;
 __decorate([
     (0, mongoose_1.Prop)(),
-    __metadata("design:type", String)
-], Observations.prototype, "_id", void 0);
-__decorate([
-    (0, mongoose_1.Prop)(),
     __metadata("design:type", Date)
 ], Observations.prototype, "review_date", void 0);
 __decorate([

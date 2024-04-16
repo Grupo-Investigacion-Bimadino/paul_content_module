@@ -19,8 +19,9 @@ export class RevisionsService {
 		return revisions;
 	}
 
-	create(createRevisionDto) {
-		let revisions = new this.revisionstModel(createRevisionDto);
+	async create(createRevisionDto) {
+		let revisions = await this.revisionstModel.create(createRevisionDto);
+		return revisions;
 	}
 	update(id, updateRevision) {
 		let revisions = this.revisionstModel.findByIdAndUpdate(id, updateRevision, {

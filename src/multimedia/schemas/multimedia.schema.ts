@@ -5,8 +5,7 @@ import mongoose, { Document } from 'mongoose';
     timestamps: true
 })
 export class Multimedia extends Document {
-    @Prop()
-    _id: string;
+    _id: mongoose.Types.ObjectId;
 
     @Prop()
     file_name: string;
@@ -15,7 +14,7 @@ export class Multimedia extends Document {
     file_type: string;
 
     @Prop()
-    file_size: number;
+    file_size: string;
 
     @Prop()
     storage_url: string;

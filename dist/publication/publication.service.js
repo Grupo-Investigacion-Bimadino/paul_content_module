@@ -29,8 +29,14 @@ let PublicationService = class PublicationService {
         let publication = await this.publicationtModel.find();
         return publication;
     }
+<<<<<<< HEAD
     create(createPublicationsDto) {
         let publication = new this.publicationtModel(createPublicationsDto);
+=======
+    async create(createPublicationsDto) {
+        let publication = await this.publicationtModel.create(createPublicationsDto);
+        return publication;
+>>>>>>> main
     }
     update(id, updatePublications) {
         let publication = this.publicationtModel.findByIdAndUpdate(id, updatePublications, { new: true });

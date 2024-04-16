@@ -19,8 +19,9 @@ export class CategoriesService {
 		return categories;
 	}
 
-	create(createCategorieDto) {
-		let categories = new this.categoriestModel(createCategorieDto);
+	async create (createCategorieDto) {
+		let categories = await this.categoriestModel.create(createCategorieDto);
+		return categories;
 	}
 	update(id, updateCategorie) {
 		let categories = this.categoriestModel.findByIdAndUpdate(

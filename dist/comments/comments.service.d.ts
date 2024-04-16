@@ -28,6 +28,7 @@ export declare class CommentsService {
     private commentstModel;
     constructor(commentstModel: Model<Comments>);
     findOne(id: number): Promise<import("mongoose").Document<unknown, {}, Comments> & Comments & Required<{
+<<<<<<< HEAD
         _id: string;
     }>>;
     findAll(): Promise<(import("mongoose").Document<unknown, {}, Comments> & Comments & Required<{
@@ -43,5 +44,24 @@ export declare class CommentsService {
         _id: string;
     }>, import("mongoose").Document<unknown, {}, Comments> & Comments & Required<{
         _id: string;
+=======
+        _id: import("mongoose").Types.ObjectId;
+    }>>;
+    findAll(): Promise<(import("mongoose").Document<unknown, {}, Comments> & Comments & Required<{
+        _id: import("mongoose").Types.ObjectId;
+    }>)[]>;
+    create(createCommentDto: any): Promise<import("mongoose").Document<unknown, {}, Comments> & Comments & Required<{
+        _id: import("mongoose").Types.ObjectId;
+    }>>;
+    update(id: any, updateComment: any): import("mongoose").Query<import("mongoose").Document<unknown, {}, Comments> & Comments & Required<{
+        _id: import("mongoose").Types.ObjectId;
+    }>, import("mongoose").Document<unknown, {}, Comments> & Comments & Required<{
+        _id: import("mongoose").Types.ObjectId;
+    }>, {}, Comments, "findOneAndUpdate">;
+    delete(id: any): import("mongoose").Query<import("mongoose").Document<unknown, {}, Comments> & Comments & Required<{
+        _id: import("mongoose").Types.ObjectId;
+    }>, import("mongoose").Document<unknown, {}, Comments> & Comments & Required<{
+        _id: import("mongoose").Types.ObjectId;
+>>>>>>> main
     }>, {}, Comments, "findOneAndUpdate">;
 }

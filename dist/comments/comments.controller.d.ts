@@ -23,11 +23,16 @@
 /// <reference types="mongoose/types/virtuals" />
 /// <reference types="mongoose" />
 /// <reference types="mongoose/types/inferschematype" />
+<<<<<<< HEAD
 import { CommentsService } from './comments.service';
+=======
+import { CommentsService } from "./comments.service";
+>>>>>>> main
 export declare class CommentsController {
     private readonly commentService;
     constructor(commentService: CommentsService);
     findOne(id: number): Promise<import("mongoose").Document<unknown, {}, import("src/comments/schemas/comments.schema").Comments> & import("src/comments/schemas/comments.schema").Comments & Required<{
+<<<<<<< HEAD
         _id: string;
     }>>;
     findAll(): Promise<(import("mongoose").Document<unknown, {}, import("src/comments/schemas/comments.schema").Comments> & import("src/comments/schemas/comments.schema").Comments & Required<{
@@ -43,5 +48,24 @@ export declare class CommentsController {
         _id: string;
     }>, import("mongoose").Document<unknown, {}, import("src/comments/schemas/comments.schema").Comments> & import("src/comments/schemas/comments.schema").Comments & Required<{
         _id: string;
+=======
+        _id: import("mongoose").Types.ObjectId;
+    }>>;
+    findAll(): Promise<(import("mongoose").Document<unknown, {}, import("src/comments/schemas/comments.schema").Comments> & import("src/comments/schemas/comments.schema").Comments & Required<{
+        _id: import("mongoose").Types.ObjectId;
+    }>)[]>;
+    create(createCommentDto: any): Promise<import("mongoose").Document<unknown, {}, import("src/comments/schemas/comments.schema").Comments> & import("src/comments/schemas/comments.schema").Comments & Required<{
+        _id: import("mongoose").Types.ObjectId;
+    }>>;
+    update(id: number, updateComment: any): import("mongoose").Query<import("mongoose").Document<unknown, {}, import("src/comments/schemas/comments.schema").Comments> & import("src/comments/schemas/comments.schema").Comments & Required<{
+        _id: import("mongoose").Types.ObjectId;
+    }>, import("mongoose").Document<unknown, {}, import("src/comments/schemas/comments.schema").Comments> & import("src/comments/schemas/comments.schema").Comments & Required<{
+        _id: import("mongoose").Types.ObjectId;
+    }>, {}, import("src/comments/schemas/comments.schema").Comments, "findOneAndUpdate">;
+    delete(id: number): import("mongoose").Query<import("mongoose").Document<unknown, {}, import("src/comments/schemas/comments.schema").Comments> & import("src/comments/schemas/comments.schema").Comments & Required<{
+        _id: import("mongoose").Types.ObjectId;
+    }>, import("mongoose").Document<unknown, {}, import("src/comments/schemas/comments.schema").Comments> & import("src/comments/schemas/comments.schema").Comments & Required<{
+        _id: import("mongoose").Types.ObjectId;
+>>>>>>> main
     }>, {}, import("src/comments/schemas/comments.schema").Comments, "findOneAndUpdate">;
 }

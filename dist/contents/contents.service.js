@@ -29,14 +29,24 @@ let ContentsService = class ContentsService {
         let contents = await this.contentstModel.find();
         return contents;
     }
+<<<<<<< HEAD
     create(createContentDto) {
         let contents = new this.contentstModel(createContentDto);
+=======
+    async create(createContentDto) {
+        let contents = await this.contentstModel.create(createContentDto);
+        return contents;
+>>>>>>> main
     }
     update(id, updateContent) {
         let contents = this.contentstModel.findByIdAndUpdate(id, updateContent, {
             new: true,
         });
+<<<<<<< HEAD
         return content_schema_1.Contents;
+=======
+        return contents;
+>>>>>>> main
     }
     delete(id) {
         let contents = this.contentstModel.findByIdAndUpdate(id);

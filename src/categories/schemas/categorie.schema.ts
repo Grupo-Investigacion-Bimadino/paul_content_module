@@ -5,8 +5,7 @@ import mongoose, { Document } from 'mongoose';
     timestamps: true
 })
 export class Categories extends Document {
-    @Prop()
-    _id: string;
+    _id: mongoose.Types.ObjectId;
 
     @Prop()
     name: string;
@@ -14,10 +13,12 @@ export class Categories extends Document {
     @Prop()
     description: string;
 
+<<<<<<< HEAD
     @Prop({type: [String]})  // Define tags como un array de strings 
+=======
+    @Prop({ type: [String] }) // Esto especifica que `tags` es un arreglo de strings.
+>>>>>>> main
     tags: string[];
 }
 
 export const CategoriesSchema = SchemaFactory.createForClass(Categories);
-
-

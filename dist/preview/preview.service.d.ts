@@ -28,6 +28,7 @@ export declare class PreviewService {
     private previewtModel;
     constructor(previewtModel: Model<Preview>);
     findOne(id: number): Promise<import("mongoose").Document<unknown, {}, Preview> & Preview & Required<{
+<<<<<<< HEAD
         _id: string;
     }>>;
     findAll(): Promise<(import("mongoose").Document<unknown, {}, Preview> & Preview & Required<{
@@ -43,5 +44,24 @@ export declare class PreviewService {
         _id: string;
     }>, import("mongoose").Document<unknown, {}, Preview> & Preview & Required<{
         _id: string;
+=======
+        _id: import("mongoose").Types.ObjectId;
+    }>>;
+    findAll(): Promise<(import("mongoose").Document<unknown, {}, Preview> & Preview & Required<{
+        _id: import("mongoose").Types.ObjectId;
+    }>)[]>;
+    create(createCategorieDto: any): Promise<import("mongoose").Document<unknown, {}, Preview> & Preview & Required<{
+        _id: import("mongoose").Types.ObjectId;
+    }>>;
+    update(id: any, updatePreview: any): import("mongoose").Query<import("mongoose").Document<unknown, {}, Preview> & Preview & Required<{
+        _id: import("mongoose").Types.ObjectId;
+    }>, import("mongoose").Document<unknown, {}, Preview> & Preview & Required<{
+        _id: import("mongoose").Types.ObjectId;
+    }>, {}, Preview, "findOneAndUpdate">;
+    delete(id: any): import("mongoose").Query<import("mongoose").Document<unknown, {}, Preview> & Preview & Required<{
+        _id: import("mongoose").Types.ObjectId;
+    }>, import("mongoose").Document<unknown, {}, Preview> & Preview & Required<{
+        _id: import("mongoose").Types.ObjectId;
+>>>>>>> main
     }>, {}, Preview, "findOneAndUpdate">;
 }

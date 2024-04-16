@@ -37,10 +37,14 @@ let PublicationController = class PublicationController {
 };
 exports.PublicationController = PublicationController;
 __decorate([
-    (0, common_1.Get)(':id'),
-    __param(0, (0, common_1.Param)('id')),
+    (0, common_1.Get)(":id"),
+    __param(0, (0, common_1.Param)("id")),
     __metadata("design:type", Function),
+<<<<<<< HEAD
     __metadata("design:paramtypes", [Number]),
+=======
+    __metadata("design:paramtypes", [String]),
+>>>>>>> main
     __metadata("design:returntype", void 0)
 ], PublicationController.prototype, "findOne", null);
 __decorate([
@@ -57,22 +61,30 @@ __decorate([
     __metadata("design:returntype", void 0)
 ], PublicationController.prototype, "create", null);
 __decorate([
-    (0, common_1.Patch)(':id'),
-    __param(0, (0, common_1.Param)('id')),
+    (0, common_1.Patch)(":id"),
+    __param(0, (0, common_1.Param)("id")),
     __param(1, (0, common_1.Body)()),
     __metadata("design:type", Function),
+<<<<<<< HEAD
     __metadata("design:paramtypes", [Number, Object]),
+=======
+    __metadata("design:paramtypes", [String, Object]),
+>>>>>>> main
     __metadata("design:returntype", void 0)
 ], PublicationController.prototype, "update", null);
 __decorate([
-    (0, common_1.Delete)(':id'),
-    __param(0, (0, common_1.Param)('id')),
+    (0, common_1.Delete)(":id"),
+    __param(0, (0, common_1.Param)("id")),
     __metadata("design:type", Function),
+<<<<<<< HEAD
     __metadata("design:paramtypes", [Number]),
+=======
+    __metadata("design:paramtypes", [String]),
+>>>>>>> main
     __metadata("design:returntype", void 0)
 ], PublicationController.prototype, "delete", null);
 exports.PublicationController = PublicationController = __decorate([
-    (0, common_1.Controller)('publications'),
+    (0, common_1.Controller)("publications"),
     __metadata("design:paramtypes", [publication_service_1.PublicationService])
 ], PublicationController);
 //# sourceMappingURL=publication.controller.js.map

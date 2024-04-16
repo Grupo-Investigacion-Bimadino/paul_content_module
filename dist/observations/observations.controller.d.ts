@@ -28,6 +28,7 @@ export declare class ObservationsController {
     private readonly observationService;
     constructor(observationService: ObservationsService);
     findOne(id: number): Promise<import("mongoose").Document<unknown, {}, import("src/observations/schemas/observations.schema").Observations> & import("src/observations/schemas/observations.schema").Observations & Required<{
+<<<<<<< HEAD
         _id: string;
     }>>;
     findAll(): Promise<(import("mongoose").Document<unknown, {}, import("src/observations/schemas/observations.schema").Observations> & import("src/observations/schemas/observations.schema").Observations & Required<{
@@ -43,5 +44,24 @@ export declare class ObservationsController {
         _id: string;
     }>, import("mongoose").Document<unknown, {}, import("src/observations/schemas/observations.schema").Observations> & import("src/observations/schemas/observations.schema").Observations & Required<{
         _id: string;
+=======
+        _id: import("mongoose").Types.ObjectId;
+    }>>;
+    findAll(): Promise<(import("mongoose").Document<unknown, {}, import("src/observations/schemas/observations.schema").Observations> & import("src/observations/schemas/observations.schema").Observations & Required<{
+        _id: import("mongoose").Types.ObjectId;
+    }>)[]>;
+    create(createObservationsDto: any): Promise<import("mongoose").Document<unknown, {}, import("src/observations/schemas/observations.schema").Observations> & import("src/observations/schemas/observations.schema").Observations & Required<{
+        _id: import("mongoose").Types.ObjectId;
+    }>>;
+    update(id: number, updateObservations: any): import("mongoose").Query<import("mongoose").Document<unknown, {}, import("src/observations/schemas/observations.schema").Observations> & import("src/observations/schemas/observations.schema").Observations & Required<{
+        _id: import("mongoose").Types.ObjectId;
+    }>, import("mongoose").Document<unknown, {}, import("src/observations/schemas/observations.schema").Observations> & import("src/observations/schemas/observations.schema").Observations & Required<{
+        _id: import("mongoose").Types.ObjectId;
+    }>, {}, import("src/observations/schemas/observations.schema").Observations, "findOneAndUpdate">;
+    delete(id: number): import("mongoose").Query<import("mongoose").Document<unknown, {}, import("src/observations/schemas/observations.schema").Observations> & import("src/observations/schemas/observations.schema").Observations & Required<{
+        _id: import("mongoose").Types.ObjectId;
+    }>, import("mongoose").Document<unknown, {}, import("src/observations/schemas/observations.schema").Observations> & import("src/observations/schemas/observations.schema").Observations & Required<{
+        _id: import("mongoose").Types.ObjectId;
+>>>>>>> main
     }>, {}, import("src/observations/schemas/observations.schema").Observations, "findOneAndUpdate">;
 }

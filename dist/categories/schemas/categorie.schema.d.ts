@@ -24,13 +24,13 @@
 /// <reference types="mongoose/types/inferschematype" />
 import mongoose, { Document } from 'mongoose';
 export declare class Categories extends Document {
-    _id: string;
+    _id: mongoose.Types.ObjectId;
     name: string;
     description: string;
     tags: string[];
 }
 export declare const CategoriesSchema: mongoose.Schema<Categories, mongoose.Model<Categories, any, any, any, mongoose.Document<unknown, any, Categories> & Categories & Required<{
-    _id: string;
+    _id: mongoose.Types.ObjectId;
 }>, any>, {}, {}, {}, {}, mongoose.DefaultSchemaOptions, Categories, mongoose.Document<unknown, {}, mongoose.FlatRecord<Categories>> & mongoose.FlatRecord<Categories> & Required<{
-    _id: string;
+    _id: mongoose.Types.ObjectId;
 }>>;

@@ -24,13 +24,23 @@
 /// <reference types="mongoose/types/inferschematype" />
 import mongoose, { Document } from 'mongoose';
 export declare class Comments extends Document {
+<<<<<<< HEAD
     _id: string;
+=======
+    _id: mongoose.Types.ObjectId;
+>>>>>>> main
     comment_text: string;
     creation_date: Date;
     author: string;
 }
 export declare const CommentSchema: mongoose.Schema<Comments, mongoose.Model<Comments, any, any, any, mongoose.Document<unknown, any, Comments> & Comments & Required<{
+<<<<<<< HEAD
     _id: string;
 }>, any>, {}, {}, {}, {}, mongoose.DefaultSchemaOptions, Comments, mongoose.Document<unknown, {}, mongoose.FlatRecord<Comments>> & mongoose.FlatRecord<Comments> & Required<{
     _id: string;
+=======
+    _id: mongoose.Types.ObjectId;
+}>, any>, {}, {}, {}, {}, mongoose.DefaultSchemaOptions, Comments, mongoose.Document<unknown, {}, mongoose.FlatRecord<Comments>> & mongoose.FlatRecord<Comments> & Required<{
+    _id: mongoose.Types.ObjectId;
+>>>>>>> main
 }>>;

@@ -29,8 +29,14 @@ let CategoriesService = class CategoriesService {
         let categories = await this.categoriestModel.find();
         return categories;
     }
+<<<<<<< HEAD
     create(createCategorieDto) {
         let categories = new this.categoriestModel(createCategorieDto);
+=======
+    async create(createCategorieDto) {
+        let categories = await this.categoriestModel.create(createCategorieDto);
+        return categories;
+>>>>>>> main
     }
     update(id, updateCategorie) {
         let categories = this.categoriestModel.findByIdAndUpdate(id, updateCategorie, { new: true });

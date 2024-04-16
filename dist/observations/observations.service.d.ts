@@ -28,6 +28,7 @@ export declare class ObservationsService {
     private observationstModel;
     constructor(observationstModel: Model<Observations>);
     findOne(id: number): Promise<import("mongoose").Document<unknown, {}, Observations> & Observations & Required<{
+<<<<<<< HEAD
         _id: string;
     }>>;
     findAll(): Promise<(import("mongoose").Document<unknown, {}, Observations> & Observations & Required<{
@@ -43,5 +44,24 @@ export declare class ObservationsService {
         _id: string;
     }>, import("mongoose").Document<unknown, {}, Observations> & Observations & Required<{
         _id: string;
+=======
+        _id: import("mongoose").Types.ObjectId;
+    }>>;
+    findAll(): Promise<(import("mongoose").Document<unknown, {}, Observations> & Observations & Required<{
+        _id: import("mongoose").Types.ObjectId;
+    }>)[]>;
+    create(createObservationsDto: any): Promise<import("mongoose").Document<unknown, {}, Observations> & Observations & Required<{
+        _id: import("mongoose").Types.ObjectId;
+    }>>;
+    update(id: any, updateObservations: any): import("mongoose").Query<import("mongoose").Document<unknown, {}, Observations> & Observations & Required<{
+        _id: import("mongoose").Types.ObjectId;
+    }>, import("mongoose").Document<unknown, {}, Observations> & Observations & Required<{
+        _id: import("mongoose").Types.ObjectId;
+    }>, {}, Observations, "findOneAndUpdate">;
+    delete(id: any): import("mongoose").Query<import("mongoose").Document<unknown, {}, Observations> & Observations & Required<{
+        _id: import("mongoose").Types.ObjectId;
+    }>, import("mongoose").Document<unknown, {}, Observations> & Observations & Required<{
+        _id: import("mongoose").Types.ObjectId;
+>>>>>>> main
     }>, {}, Observations, "findOneAndUpdate">;
 }

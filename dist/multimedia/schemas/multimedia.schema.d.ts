@@ -24,16 +24,16 @@
 /// <reference types="mongoose/types/inferschematype" />
 import mongoose, { Document } from 'mongoose';
 export declare class Multimedia extends Document {
-    _id: string;
+    _id: mongoose.Types.ObjectId;
     file_name: string;
     file_type: string;
-    file_size: number;
+    file_size: string;
     storage_url: string;
     description: string;
     upload_date: Date;
 }
 export declare const MultimediaSchema: mongoose.Schema<Multimedia, mongoose.Model<Multimedia, any, any, any, mongoose.Document<unknown, any, Multimedia> & Multimedia & Required<{
-    _id: string;
+    _id: mongoose.Types.ObjectId;
 }>, any>, {}, {}, {}, {}, mongoose.DefaultSchemaOptions, Multimedia, mongoose.Document<unknown, {}, mongoose.FlatRecord<Multimedia>> & mongoose.FlatRecord<Multimedia> & Required<{
-    _id: string;
+    _id: mongoose.Types.ObjectId;
 }>>;

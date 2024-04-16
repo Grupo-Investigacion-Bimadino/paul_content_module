@@ -28,6 +28,7 @@ export declare class ContentsService {
     private contentstModel;
     constructor(contentstModel: Model<Contents>);
     findOne(id: number): Promise<import("mongoose").Document<unknown, {}, Contents> & Contents & Required<{
+<<<<<<< HEAD
         _id: string;
     }>>;
     findAll(): Promise<(import("mongoose").Document<unknown, {}, Contents> & Contents & Required<{
@@ -39,5 +40,24 @@ export declare class ContentsService {
         _id: string;
     }>, import("mongoose").Document<unknown, {}, Contents> & Contents & Required<{
         _id: string;
+=======
+        _id: import("mongoose").Types.ObjectId;
+    }>>;
+    findAll(): Promise<(import("mongoose").Document<unknown, {}, Contents> & Contents & Required<{
+        _id: import("mongoose").Types.ObjectId;
+    }>)[]>;
+    create(createContentDto: any): Promise<import("mongoose").Document<unknown, {}, Contents> & Contents & Required<{
+        _id: import("mongoose").Types.ObjectId;
+    }>>;
+    update(id: any, updateContent: any): import("mongoose").Query<import("mongoose").Document<unknown, {}, Contents> & Contents & Required<{
+        _id: import("mongoose").Types.ObjectId;
+    }>, import("mongoose").Document<unknown, {}, Contents> & Contents & Required<{
+        _id: import("mongoose").Types.ObjectId;
+    }>, {}, Contents, "findOneAndUpdate">;
+    delete(id: any): import("mongoose").Query<import("mongoose").Document<unknown, {}, Contents> & Contents & Required<{
+        _id: import("mongoose").Types.ObjectId;
+    }>, import("mongoose").Document<unknown, {}, Contents> & Contents & Required<{
+        _id: import("mongoose").Types.ObjectId;
+>>>>>>> main
     }>, {}, Contents, "findOneAndUpdate">;
 }

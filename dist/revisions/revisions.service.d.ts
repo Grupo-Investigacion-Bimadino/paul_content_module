@@ -28,6 +28,7 @@ export declare class RevisionsService {
     private revisionstModel;
     constructor(revisionstModel: Model<Revisions>);
     findOne(id: number): Promise<import("mongoose").Document<unknown, {}, Revisions> & Revisions & Required<{
+<<<<<<< HEAD
         _id: string;
     }>>;
     findAll(): Promise<(import("mongoose").Document<unknown, {}, Revisions> & Revisions & Required<{
@@ -43,5 +44,24 @@ export declare class RevisionsService {
         _id: string;
     }>, import("mongoose").Document<unknown, {}, Revisions> & Revisions & Required<{
         _id: string;
+=======
+        _id: import("mongoose").Types.ObjectId;
+    }>>;
+    findAll(): Promise<(import("mongoose").Document<unknown, {}, Revisions> & Revisions & Required<{
+        _id: import("mongoose").Types.ObjectId;
+    }>)[]>;
+    create(createRevisionDto: any): Promise<import("mongoose").Document<unknown, {}, Revisions> & Revisions & Required<{
+        _id: import("mongoose").Types.ObjectId;
+    }>>;
+    update(id: any, updateRevision: any): import("mongoose").Query<import("mongoose").Document<unknown, {}, Revisions> & Revisions & Required<{
+        _id: import("mongoose").Types.ObjectId;
+    }>, import("mongoose").Document<unknown, {}, Revisions> & Revisions & Required<{
+        _id: import("mongoose").Types.ObjectId;
+    }>, {}, Revisions, "findOneAndUpdate">;
+    delete(id: any): import("mongoose").Query<import("mongoose").Document<unknown, {}, Revisions> & Revisions & Required<{
+        _id: import("mongoose").Types.ObjectId;
+    }>, import("mongoose").Document<unknown, {}, Revisions> & Revisions & Required<{
+        _id: import("mongoose").Types.ObjectId;
+>>>>>>> main
     }>, {}, Revisions, "findOneAndUpdate">;
 }

@@ -29,8 +29,14 @@ let RevisionsService = class RevisionsService {
         let revisions = await this.revisionstModel.find();
         return revisions;
     }
+<<<<<<< HEAD
     create(createRevisionDto) {
         let revisions = new this.revisionstModel(createRevisionDto);
+=======
+    async create(createRevisionDto) {
+        let revisions = await this.revisionstModel.create(createRevisionDto);
+        return revisions;
+>>>>>>> main
     }
     update(id, updateRevision) {
         let revisions = this.revisionstModel.findByIdAndUpdate(id, updateRevision, {

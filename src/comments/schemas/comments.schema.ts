@@ -6,8 +6,7 @@ import  mongoose, {Document} from 'mongoose';
 })
 
 export class Comments extends Document {
-    @Prop()
-    _id: string;
+    _id: mongoose.Types.ObjectId;
 
     @Prop()
     comment_text: string;
