@@ -28,20 +28,22 @@ export declare class MultimediaController {
     private readonly multimediaService;
     constructor(multimediaService: MultimediaService);
     findOne(id: number): Promise<import("mongoose").Document<unknown, {}, import("src/multimedia/schemas/multimedia.schema").Multimedia> & import("src/multimedia/schemas/multimedia.schema").Multimedia & Required<{
-        _id: string;
+        _id: import("mongoose").Types.ObjectId;
     }>>;
     findAll(): Promise<(import("mongoose").Document<unknown, {}, import("src/multimedia/schemas/multimedia.schema").Multimedia> & import("src/multimedia/schemas/multimedia.schema").Multimedia & Required<{
-        _id: string;
+        _id: import("mongoose").Types.ObjectId;
     }>)[]>;
-    create(createMultimediaDto: any): void;
+    create(createMultimediaDto: any): Promise<import("mongoose").Document<unknown, {}, import("src/multimedia/schemas/multimedia.schema").Multimedia> & import("src/multimedia/schemas/multimedia.schema").Multimedia & Required<{
+        _id: import("mongoose").Types.ObjectId;
+    }>>;
     update(id: number, updateMultimedia: any): import("mongoose").Query<import("mongoose").Document<unknown, {}, import("src/multimedia/schemas/multimedia.schema").Multimedia> & import("src/multimedia/schemas/multimedia.schema").Multimedia & Required<{
-        _id: string;
+        _id: import("mongoose").Types.ObjectId;
     }>, import("mongoose").Document<unknown, {}, import("src/multimedia/schemas/multimedia.schema").Multimedia> & import("src/multimedia/schemas/multimedia.schema").Multimedia & Required<{
-        _id: string;
+        _id: import("mongoose").Types.ObjectId;
     }>, {}, import("src/multimedia/schemas/multimedia.schema").Multimedia, "findOneAndUpdate">;
     delete(id: number): import("mongoose").Query<import("mongoose").Document<unknown, {}, import("src/multimedia/schemas/multimedia.schema").Multimedia> & import("src/multimedia/schemas/multimedia.schema").Multimedia & Required<{
-        _id: string;
+        _id: import("mongoose").Types.ObjectId;
     }>, import("mongoose").Document<unknown, {}, import("src/multimedia/schemas/multimedia.schema").Multimedia> & import("src/multimedia/schemas/multimedia.schema").Multimedia & Required<{
-        _id: string;
+        _id: import("mongoose").Types.ObjectId;
     }>, {}, import("src/multimedia/schemas/multimedia.schema").Multimedia, "findOneAndDelete">;
 }

@@ -18,14 +18,10 @@ exports.Preview = Preview;
 __decorate([
     (0, mongoose_1.Prop)(),
     __metadata("design:type", String)
-], Preview.prototype, "_id", void 0);
-__decorate([
-    (0, mongoose_1.Prop)(),
-    __metadata("design:type", String)
 ], Preview.prototype, "preview_url", void 0);
 __decorate([
-    (0, mongoose_1.Prop)(),
-    __metadata("design:type", Object)
+    (0, mongoose_1.Prop)({ type: [String] }),
+    __metadata("design:type", Array)
 ], Preview.prototype, "associated_content", void 0);
 exports.Preview = Preview = __decorate([
     (0, mongoose_1.Schema)({

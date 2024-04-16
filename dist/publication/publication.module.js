@@ -10,11 +10,17 @@ exports.PublicationModule = void 0;
 const common_1 = require("@nestjs/common");
 const publication_controller_1 = require("./publication.controller");
 const publication_service_1 = require("./publication.service");
+const mongoose_1 = require("@nestjs/mongoose");
+const publication_schema_1 = require("../publication/schemas/publication.schema");
+const publication_schema_2 = require("../publication/schemas/publication.schema");
 let PublicationModule = class PublicationModule {
 };
 exports.PublicationModule = PublicationModule;
 exports.PublicationModule = PublicationModule = __decorate([
     (0, common_1.Module)({
+        imports: [
+            mongoose_1.MongooseModule.forFeature([{ name: publication_schema_2.Publication.name, schema: publication_schema_1.PublicationSchema }]),
+        ],
         controllers: [publication_controller_1.PublicationController],
         providers: [publication_service_1.PublicationService]
     })

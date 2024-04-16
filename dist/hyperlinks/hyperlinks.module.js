@@ -10,11 +10,17 @@ exports.HyperlinksModule = void 0;
 const common_1 = require("@nestjs/common");
 const hyperlinks_controller_1 = require("./hyperlinks.controller");
 const hyperlinks_service_1 = require("./hyperlinks.service");
+const mongoose_1 = require("@nestjs/mongoose");
+const hyperlinks_schema_1 = require("../hyperlinks/schemas/hyperlinks.schema");
+const hyperlinks_schema_2 = require("../hyperlinks/schemas/hyperlinks.schema");
 let HyperlinksModule = class HyperlinksModule {
 };
 exports.HyperlinksModule = HyperlinksModule;
 exports.HyperlinksModule = HyperlinksModule = __decorate([
     (0, common_1.Module)({
+        imports: [
+            mongoose_1.MongooseModule.forFeature([{ name: hyperlinks_schema_2.Hyperlinks.name, schema: hyperlinks_schema_1.HyperlinksSchema }]),
+        ],
         controllers: [hyperlinks_controller_1.HyperlinksController],
         providers: [hyperlinks_service_1.HyperlinksService]
     })

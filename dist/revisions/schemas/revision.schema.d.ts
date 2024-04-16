@@ -24,12 +24,12 @@
 /// <reference types="mongoose/types/inferschematype" />
 import mongoose, { Document } from 'mongoose';
 export declare class Revisions extends Document {
-    _id: string;
+    _id: mongoose.Types.ObjectId;
     version: string;
     review_author: string;
 }
 export declare const RevisionsSchema: mongoose.Schema<Revisions, mongoose.Model<Revisions, any, any, any, mongoose.Document<unknown, any, Revisions> & Revisions & Required<{
-    _id: string;
+    _id: mongoose.Types.ObjectId;
 }>, any>, {}, {}, {}, {}, mongoose.DefaultSchemaOptions, Revisions, mongoose.Document<unknown, {}, mongoose.FlatRecord<Revisions>> & mongoose.FlatRecord<Revisions> & Required<{
-    _id: string;
+    _id: mongoose.Types.ObjectId;
 }>>;

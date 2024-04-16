@@ -18,18 +18,14 @@ exports.Categories = Categories;
 __decorate([
     (0, mongoose_1.Prop)(),
     __metadata("design:type", String)
-], Categories.prototype, "_id", void 0);
-__decorate([
-    (0, mongoose_1.Prop)(),
-    __metadata("design:type", String)
 ], Categories.prototype, "name", void 0);
 __decorate([
     (0, mongoose_1.Prop)(),
     __metadata("design:type", String)
 ], Categories.prototype, "description", void 0);
 __decorate([
-    (0, mongoose_1.Prop)(),
-    __metadata("design:type", Object)
+    (0, mongoose_1.Prop)({ type: [String] }),
+    __metadata("design:type", Array)
 ], Categories.prototype, "tags", void 0);
 exports.Categories = Categories = __decorate([
     (0, mongoose_1.Schema)({

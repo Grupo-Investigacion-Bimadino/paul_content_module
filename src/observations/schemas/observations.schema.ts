@@ -5,9 +5,8 @@ import mongoose, { Document } from 'mongoose';
     timestamps: true
 })
 export class Observations extends Document {
-    @Prop()
-    _id: string;
-
+    _id: mongoose.Types.ObjectId;
+    
     @Prop()
     review_date: Date;
 

@@ -19,8 +19,9 @@ export class PreviewService {
 		return preview;
 	}
 
-	create(createCategorieDto) {
-		let preview = new this.previewtModel(createCategorieDto);
+	async create(createCategorieDto) {
+		let preview = await this.previewtModel.create(createCategorieDto);
+		return preview;
 	}
 	update(id, updatePreview) {
 		let preview = this.previewtModel.findByIdAndUpdate(id, updatePreview, {

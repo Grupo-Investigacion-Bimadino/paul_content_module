@@ -9,28 +9,24 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.PublicacionSchema = exports.Publicacion = void 0;
+exports.PublicationSchema = exports.Publication = void 0;
 const mongoose_1 = require("@nestjs/mongoose");
 const mongoose_2 = require("mongoose");
-let Publicacion = class Publicacion extends mongoose_2.Document {
+let Publication = class Publication extends mongoose_2.Document {
 };
-exports.Publicacion = Publicacion;
-__decorate([
-    (0, mongoose_1.Prop)(),
-    __metadata("design:type", String)
-], Publicacion.prototype, "_id", void 0);
+exports.Publication = Publication;
 __decorate([
     (0, mongoose_1.Prop)(),
     __metadata("design:type", Date)
-], Publicacion.prototype, "publish_start_date", void 0);
+], Publication.prototype, "publish_start_date", void 0);
 __decorate([
-    (0, mongoose_1.Prop)(),
-    __metadata("design:type", Object)
-], Publicacion.prototype, "associated_content", void 0);
-exports.Publicacion = Publicacion = __decorate([
+    (0, mongoose_1.Prop)({ type: [String] }),
+    __metadata("design:type", Array)
+], Publication.prototype, "associated_content", void 0);
+exports.Publication = Publication = __decorate([
     (0, mongoose_1.Schema)({
         timestamps: true
     })
-], Publicacion);
-exports.PublicacionSchema = mongoose_1.SchemaFactory.createForClass(Publicacion);
+], Publication);
+exports.PublicationSchema = mongoose_1.SchemaFactory.createForClass(Publication);
 //# sourceMappingURL=publication.schema.js.map

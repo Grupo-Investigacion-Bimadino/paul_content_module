@@ -10,11 +10,17 @@ exports.RevisionsModule = void 0;
 const common_1 = require("@nestjs/common");
 const revisions_controller_1 = require("./revisions.controller");
 const revisions_service_1 = require("./revisions.service");
+const mongoose_1 = require("@nestjs/mongoose");
+const revision_schema_1 = require("../revisions/schemas/revision.schema");
+const revision_schema_2 = require("../revisions/schemas/revision.schema");
 let RevisionsModule = class RevisionsModule {
 };
 exports.RevisionsModule = RevisionsModule;
 exports.RevisionsModule = RevisionsModule = __decorate([
     (0, common_1.Module)({
+        imports: [
+            mongoose_1.MongooseModule.forFeature([{ name: revision_schema_2.Revisions.name, schema: revision_schema_1.RevisionsSchema }]),
+        ],
         controllers: [revisions_controller_1.RevisionsController],
         providers: [revisions_service_1.RevisionsService]
     })

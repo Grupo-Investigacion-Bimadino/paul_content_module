@@ -18,5 +18,3 @@ import { PublicationModule } from './publication/publication.module';
   providers: [AppService],
 })
 export class AppModule {}
-
-

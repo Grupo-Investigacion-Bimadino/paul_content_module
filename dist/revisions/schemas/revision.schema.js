@@ -18,10 +18,6 @@ exports.Revisions = Revisions;
 __decorate([
     (0, mongoose_1.Prop)(),
     __metadata("design:type", String)
-], Revisions.prototype, "_id", void 0);
-__decorate([
-    (0, mongoose_1.Prop)(),
-    __metadata("design:type", String)
 ], Revisions.prototype, "version", void 0);
 __decorate([
     (0, mongoose_1.Prop)(),

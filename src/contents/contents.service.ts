@@ -19,14 +19,15 @@ export class ContentsService {
 		return contents;
 	}
 
-	create(createContentDto) {
-		let contents = new this.contentstModel(createContentDto);
+	async create(createContentDto) {
+		let contents = await this.contentstModel.create(createContentDto);
+		return contents;
 	}
 	update(id, updateContent) {
 		let contents = this.contentstModel.findByIdAndUpdate(id, updateContent, {
 			new: true,
 		});
-		return Contents;
+		return contents;
 	}
 	delete(id) {
 		let contents = this.contentstModel.findByIdAndUpdate(id);

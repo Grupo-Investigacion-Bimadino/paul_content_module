@@ -24,14 +24,14 @@
 /// <reference types="mongoose/types/inferschematype" />
 import mongoose, { Document } from 'mongoose';
 export declare class Hyperlinks extends Document {
-    _id: string;
+    _id: mongoose.Types.ObjectId;
     url: string;
     link_text: string;
     creation_date: Date;
     author: string;
 }
 export declare const HyperlinksSchema: mongoose.Schema<Hyperlinks, mongoose.Model<Hyperlinks, any, any, any, mongoose.Document<unknown, any, Hyperlinks> & Hyperlinks & Required<{
-    _id: string;
+    _id: mongoose.Types.ObjectId;
 }>, any>, {}, {}, {}, {}, mongoose.DefaultSchemaOptions, Hyperlinks, mongoose.Document<unknown, {}, mongoose.FlatRecord<Hyperlinks>> & mongoose.FlatRecord<Hyperlinks> & Required<{
-    _id: string;
+    _id: mongoose.Types.ObjectId;
 }>>;

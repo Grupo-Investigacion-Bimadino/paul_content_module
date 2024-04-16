@@ -23,13 +23,13 @@
 /// <reference types="mongoose/types/virtuals" />
 /// <reference types="mongoose/types/inferschematype" />
 import mongoose, { Document } from 'mongoose';
-export declare class Publicacion extends Document {
-    _id: string;
+export declare class Publication extends Document {
+    _id: mongoose.Types.ObjectId;
     publish_start_date: Date;
-    associated_content: object;
+    associated_content: string[];
 }
-export declare const PublicacionSchema: mongoose.Schema<Publicacion, mongoose.Model<Publicacion, any, any, any, mongoose.Document<unknown, any, Publicacion> & Publicacion & Required<{
-    _id: string;
-}>, any>, {}, {}, {}, {}, mongoose.DefaultSchemaOptions, Publicacion, mongoose.Document<unknown, {}, mongoose.FlatRecord<Publicacion>> & mongoose.FlatRecord<Publicacion> & Required<{
-    _id: string;
+export declare const PublicationSchema: mongoose.Schema<Publication, mongoose.Model<Publication, any, any, any, mongoose.Document<unknown, any, Publication> & Publication & Required<{
+    _id: mongoose.Types.ObjectId;
+}>, any>, {}, {}, {}, {}, mongoose.DefaultSchemaOptions, Publication, mongoose.Document<unknown, {}, mongoose.FlatRecord<Publication>> & mongoose.FlatRecord<Publication> & Required<{
+    _id: mongoose.Types.ObjectId;
 }>>;
