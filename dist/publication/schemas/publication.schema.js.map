@@ -1,5 +1,0 @@
-<<<<<<< HEAD
-{"version":3,"file":"publication.schema.js","sourceRoot":"","sources":["../../../src/publication/schemas/publication.schema.ts"],"names":[],"mappings":";;;;;;;;;;;;AAAA,+CAA+D;AAC/D,uCAA8C;AAKvC,IAAM,WAAW,GAAjB,MAAM,WAAY,SAAQ,mBAAQ;CASxC,CAAA;AATY,kCAAW;AAEpB;IADC,IAAA,eAAI,GAAE;;wCACK;AAGZ;IADC,IAAA,eAAI,GAAE;8BACa,IAAI;uDAAC;AAGzB;IADC,IAAA,eAAI,EAAC,CAAC,MAAM,CAAC,CAAC;;uDACY;sBARlB,WAAW;IAHvB,IAAA,iBAAM,EAAC;QACJ,UAAU,EAAE,IAAI;KACnB,CAAC;GACW,WAAW,CASvB;AAEY,QAAA,iBAAiB,GAAG,wBAAa,CAAC,cAAc,CAAC,WAAW,CAAC,CAAC"}
-=======
-{"version":3,"file":"publication.schema.js","sourceRoot":"","sources":["../../../src/publication/schemas/publication.schema.ts"],"names":[],"mappings":";;;;;;;;;;;;AAAA,+CAA+D;AAC/D,uCAA8C;AAKvC,IAAM,WAAW,GAAjB,MAAM,WAAY,SAAQ,mBAAQ;CAUxC,CAAA;AAVY,kCAAW;AAIpB;IADC,IAAA,eAAI,GAAE;8BACa,IAAI;uDAAC;AAGzB;IADC,IAAA,eAAI,EAAC,EAAE,IAAI,EAAE,CAAC,MAAM,CAAC,EAAE,CAAC;;uDACI;sBAPpB,WAAW;IAHvB,IAAA,iBAAM,EAAC;QACJ,UAAU,EAAE,IAAI;KACnB,CAAC;GACW,WAAW,CAUvB;AAEY,QAAA,iBAAiB,GAAG,wBAAa,CAAC,cAAc,CAAC,WAAW,CAAC,CAAC"}
->>>>>>> main
