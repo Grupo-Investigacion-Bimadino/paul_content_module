@@ -30,7 +30,7 @@ export class RevisionsService {
 		return revisions;
 	}
 	delete(id) {
-		let revisions = this.revisionstModel.findByIdAndUpdate(id);
+		let revisions = this.revisionstModel.findByIdAndDelete(id);
 		return revisions;
 	}
 }

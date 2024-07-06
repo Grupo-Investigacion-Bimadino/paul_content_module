@@ -30,7 +30,7 @@ export class CommentsService {
 		return comments;
 	}
 	delete(id) {
-		let comments = this.commentstModel.findByIdAndUpdate(id);
+		let comments = this.commentstModel.findByIdAndDelete(id);
 		return comments;
 	}
 }

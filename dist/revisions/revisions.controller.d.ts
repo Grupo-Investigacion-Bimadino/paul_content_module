@@ -28,23 +28,6 @@ export declare class RevisionsController {
     private readonly revisionService;
     constructor(revisionService: RevisionsService);
     findOne(id: number): Promise<import("mongoose").Document<unknown, {}, import("src/revisions/schemas/revision.schema").Revisions> & import("src/revisions/schemas/revision.schema").Revisions & Required<{
-<<<<<<< HEAD
-        _id: string;
-    }>>;
-    findAll(): Promise<(import("mongoose").Document<unknown, {}, import("src/revisions/schemas/revision.schema").Revisions> & import("src/revisions/schemas/revision.schema").Revisions & Required<{
-        _id: string;
-    }>)[]>;
-    create(createRevisionDto: any): void;
-    update(id: number, updateRevision: any): import("mongoose").Query<import("mongoose").Document<unknown, {}, import("src/revisions/schemas/revision.schema").Revisions> & import("src/revisions/schemas/revision.schema").Revisions & Required<{
-        _id: string;
-    }>, import("mongoose").Document<unknown, {}, import("src/revisions/schemas/revision.schema").Revisions> & import("src/revisions/schemas/revision.schema").Revisions & Required<{
-        _id: string;
-    }>, {}, import("src/revisions/schemas/revision.schema").Revisions, "findOneAndUpdate">;
-    delete(id: number): import("mongoose").Query<import("mongoose").Document<unknown, {}, import("src/revisions/schemas/revision.schema").Revisions> & import("src/revisions/schemas/revision.schema").Revisions & Required<{
-        _id: string;
-    }>, import("mongoose").Document<unknown, {}, import("src/revisions/schemas/revision.schema").Revisions> & import("src/revisions/schemas/revision.schema").Revisions & Required<{
-        _id: string;
-=======
         _id: import("mongoose").Types.ObjectId;
     }>>;
     findAll(): Promise<(import("mongoose").Document<unknown, {}, import("src/revisions/schemas/revision.schema").Revisions> & import("src/revisions/schemas/revision.schema").Revisions & Required<{
@@ -62,6 +45,5 @@ export declare class RevisionsController {
         _id: import("mongoose").Types.ObjectId;
     }>, import("mongoose").Document<unknown, {}, import("src/revisions/schemas/revision.schema").Revisions> & import("src/revisions/schemas/revision.schema").Revisions & Required<{
         _id: import("mongoose").Types.ObjectId;
->>>>>>> main
-    }>, {}, import("src/revisions/schemas/revision.schema").Revisions, "findOneAndUpdate">;
+    }>, {}, import("src/revisions/schemas/revision.schema").Revisions, "findOneAndDelete">;
 }

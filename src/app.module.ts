@@ -13,7 +13,7 @@ import { PreviewModule } from './preview/preview.module';
 import { PublicationModule } from './publication/publication.module';
 
 @Module({
-  imports: [MongooseModule.forRoot('mongodb+srv://jperezargel06:KsYvKa8viyzON4SZ@cluster0.h8kkarc.mongodb.net/?retryWrites=true&w=majority'), ContentsModule, MultimediaModule, HyperlinksModule, RevisionsModule, ObservationsModule, CategoriesModule, CommentsModule, PreviewModule, PublicationModule],
+  imports: [MongooseModule.forRoot('mongodb://localhost:27017'), ContentsModule, MultimediaModule, HyperlinksModule, RevisionsModule, ObservationsModule, CategoriesModule, CommentsModule, PreviewModule, PublicationModule],
   controllers: [AppController],
   providers: [AppService],
 })

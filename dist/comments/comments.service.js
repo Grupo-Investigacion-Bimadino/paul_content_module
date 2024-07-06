@@ -29,14 +29,9 @@ let CommentsService = class CommentsService {
         let comments = await this.commentstModel.find();
         return comments;
     }
-<<<<<<< HEAD
-    create(createCommentDto) {
-        let comments = new this.commentstModel(createCommentDto);
-=======
     async create(createCommentDto) {
         let comments = await this.commentstModel.create(createCommentDto);
         return comments;
->>>>>>> main
     }
     update(id, updateComment) {
         let comments = this.commentstModel.findByIdAndUpdate(id, updateComment, {
@@ -45,7 +40,7 @@ let CommentsService = class CommentsService {
         return comments;
     }
     delete(id) {
-        let comments = this.commentstModel.findByIdAndUpdate(id);
+        let comments = this.commentstModel.findByIdAndDelete(id);
         return comments;
     }
 };

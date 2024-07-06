@@ -32,7 +32,7 @@ export class ObservationsService {
 		return observations;
 	}
 	delete(id) {
-		let observations = this.observationstModel.findByIdAndUpdate(id);
+		let observations = this.observationstModel.findByIdAndDelete(id);
 		return observations;
 	}
 }

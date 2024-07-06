@@ -28,23 +28,6 @@ export declare class CategoriesService {
     private categoriestModel;
     constructor(categoriestModel: Model<Categories>);
     findOne(id: number): Promise<import("mongoose").Document<unknown, {}, Categories> & Categories & Required<{
-<<<<<<< HEAD
-        _id: string;
-    }>>;
-    findAll(): Promise<(import("mongoose").Document<unknown, {}, Categories> & Categories & Required<{
-        _id: string;
-    }>)[]>;
-    create(createCategorieDto: any): void;
-    update(id: any, updateCategorie: any): import("mongoose").Query<import("mongoose").Document<unknown, {}, Categories> & Categories & Required<{
-        _id: string;
-    }>, import("mongoose").Document<unknown, {}, Categories> & Categories & Required<{
-        _id: string;
-    }>, {}, Categories, "findOneAndUpdate">;
-    delete(id: any): import("mongoose").Query<import("mongoose").Document<unknown, {}, Categories> & Categories & Required<{
-        _id: string;
-    }>, import("mongoose").Document<unknown, {}, Categories> & Categories & Required<{
-        _id: string;
-=======
         _id: import("mongoose").Types.ObjectId;
     }>>;
     findAll(): Promise<(import("mongoose").Document<unknown, {}, Categories> & Categories & Required<{
@@ -62,6 +45,5 @@ export declare class CategoriesService {
         _id: import("mongoose").Types.ObjectId;
     }>, import("mongoose").Document<unknown, {}, Categories> & Categories & Required<{
         _id: import("mongoose").Types.ObjectId;
->>>>>>> main
-    }>, {}, Categories, "findOneAndUpdate">;
+    }>, {}, Categories, "findOneAndDelete">;
 }

@@ -32,7 +32,7 @@ export class PublicationService {
 		return publication;
 	}
 	delete(id) {
-		let publication = this.publicationtModel.findByIdAndUpdate(id);
+		let publication = this.publicationtModel.findByIdAndDelete(id);
 		return publication;
 	}
 }

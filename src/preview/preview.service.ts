@@ -30,7 +30,7 @@ export class PreviewService {
 		return preview;
 	}
 	delete(id) {
-		let preview = this.previewtModel.findByIdAndUpdate(id);
+		let preview = this.previewtModel.findByIdAndDelete(id);
 		return preview;
 	}
 }

@@ -1,35 +1,33 @@
-import { Prop, Schema, SchemaFactory } from '@nestjs/mongoose';
-import  mongoose, {Document} from 'mongoose';
+import { Prop, Schema, SchemaFactory } from "@nestjs/mongoose";
+import mongoose, { Document } from "mongoose";
 
 @Schema({
-    timestamps: true
+	timestamps: true,
 })
-
 export class Contents extends Document {
-    _id: mongoose.Types.ObjectId;
+	_id: mongoose.Types.ObjectId;
 
-    @Prop()
-    title: string;
+	@Prop()
+	title: string;
 
-    @Prop()
-    text: string;
+	@Prop()
+	text: string;
 
-    @Prop(/* {type: mongoose.Schema.Types.ObjectId, ref: 'User'} */)
-    author: string;
+	@Prop(/* {type: mongoose.Schema.Types.ObjectId, ref: 'User'} */)
+	author: string;
 
-    @Prop()
-    creationdate: Date;
+	@Prop()
+	creationdate: string; //Debe ser date en vez de string
 
-    @Prop()
-    modificationdate: Date;
+	@Prop()
+	modificationdate: string; //Debe ser date en vez de string
 
-    @Prop(/* {type: String, enum:['DRAFT', 'PUBLISHED', 'DELETE'], default: 'DRAFT'} */)
-    status: string;
+	@Prop({type: String, enum:['DRAFT', 'PUBLISHED', 'DELETE'], default: 'DRAFT'})
+	status: string;
 
-    @Prop()
-    contenttype: string;
+	@Prop()
+	contenttype: string;
 }
 
-export const ContentSchema = SchemaFactory.createForClass(Contents);
-
-
+export const ContentSchema = SchemaFactory.createForClass(Contents); 
+ 

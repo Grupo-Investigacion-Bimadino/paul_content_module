@@ -18,20 +18,6 @@ exports.Contents = Contents;
 __decorate([
     (0, mongoose_1.Prop)(),
     __metadata("design:type", String)
-<<<<<<< HEAD
-], Contents.prototype, "_id", void 0);
-__decorate([
-    (0, mongoose_1.Prop)(),
-    __metadata("design:type", String)
-], Contents.prototype, "title", void 0);
-__decorate([
-    (0, mongoose_1.Prop)(),
-    __metadata("design:type", String)
-], Contents.prototype, "text", void 0);
-__decorate([
-    (0, mongoose_1.Prop)({ type: mongoose_2.default.Schema.Types.ObjectId, ref: 'User' }),
-    __metadata("design:type", String)
-=======
 ], Contents.prototype, "title", void 0);
 __decorate([
     (0, mongoose_1.Prop)(),
@@ -40,30 +26,26 @@ __decorate([
 __decorate([
     (0, mongoose_1.Prop)(),
     __metadata("design:type", String)
->>>>>>> main
 ], Contents.prototype, "author", void 0);
 __decorate([
     (0, mongoose_1.Prop)(),
-    __metadata("design:type", Date)
+    __metadata("design:type", String)
 ], Contents.prototype, "creationdate", void 0);
 __decorate([
     (0, mongoose_1.Prop)(),
-    __metadata("design:type", Date)
+    __metadata("design:type", String)
 ], Contents.prototype, "modificationdate", void 0);
 __decorate([
-    (0, mongoose_1.Prop)(),
+    (0, mongoose_1.Prop)({ type: String, enum: ['DRAFT', 'PUBLISHED', 'DELETE'], default: 'DRAFT' }),
     __metadata("design:type", String)
 ], Contents.prototype, "status", void 0);
-<<<<<<< HEAD
-=======
 __decorate([
     (0, mongoose_1.Prop)(),
     __metadata("design:type", String)
 ], Contents.prototype, "contenttype", void 0);
->>>>>>> main
 exports.Contents = Contents = __decorate([
     (0, mongoose_1.Schema)({
-        timestamps: true
+        timestamps: true,
     })
 ], Contents);
 exports.ContentSchema = mongoose_1.SchemaFactory.createForClass(Contents);

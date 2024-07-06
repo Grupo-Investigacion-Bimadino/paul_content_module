@@ -32,7 +32,7 @@ export class HyperlinksService {
 		return hyperlinks;
 	}
 	delete(id) {
-		let hyperlinks = this.hyperlinkstModel.findByIdAndUpdate(id);
+		let hyperlinks = this.hyperlinkstModel.findByIdAndDelete(id);
 		return hyperlinks;
 	}
 }

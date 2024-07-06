@@ -26,7 +26,7 @@ import mongoose, { Document } from 'mongoose';
 export declare class Preview extends Document {
     _id: mongoose.Types.ObjectId;
     preview_url: string;
-    associated_content: string[];
+    associated_content: object;
 }
 export declare const PreviewSchema: mongoose.Schema<Preview, mongoose.Model<Preview, any, any, any, mongoose.Document<unknown, any, Preview> & Preview & Required<{
     _id: mongoose.Types.ObjectId;

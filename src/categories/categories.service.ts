@@ -32,7 +32,7 @@ export class CategoriesService {
 		return categories;
 	}
 	delete(id) {
-        let categories = this.categoriestModel.findByIdAndUpdate(id);
+        let categories = this.categoriestModel.findByIdAndDelete(id);
 		return categories;
 	}
 }

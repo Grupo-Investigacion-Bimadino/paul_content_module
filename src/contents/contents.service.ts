@@ -30,7 +30,7 @@ export class ContentsService {
 		return contents;
 	}
 	delete(id) {
-		let contents = this.contentstModel.findByIdAndUpdate(id);
+		let contents = this.contentstModel.findByIdAndDelete(id);
 		return contents;
 	}
 }

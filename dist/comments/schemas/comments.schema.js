@@ -18,13 +18,6 @@ exports.Comments = Comments;
 __decorate([
     (0, mongoose_1.Prop)(),
     __metadata("design:type", String)
-<<<<<<< HEAD
-], Comments.prototype, "_id", void 0);
-__decorate([
-    (0, mongoose_1.Prop)(),
-    __metadata("design:type", String)
-=======
->>>>>>> main
 ], Comments.prototype, "comment_text", void 0);
 __decorate([
     (0, mongoose_1.Prop)(),
